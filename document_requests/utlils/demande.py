@@ -176,6 +176,13 @@ def generate_document_request_pdf(document_request):
     c = canvas.Canvas(file_path, pagesize=A4)
     width, height = A4
 
+    # Load and draw logo
+    logo_path = settings.LOGO_PATH
+    if os.path.exists(logo_path):
+        c.drawImage(logo_path, 60, height - 100, width=80, height=50) # Adjust x, y, width, height as needed
+    else:
+        print(f"Warning: Logo not found at {logo_path}")
+
     t = TEXTS['ar']
 
     # Header
