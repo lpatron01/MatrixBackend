@@ -4,10 +4,33 @@ from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from .models import User
+from .models import User, EducationHistory
+
+
+class EducationHistorySerializer(serializers.ModelSerializer):
+    grade_display = serializers.CharField(source="get_grade_display", read_only=True)
+    session_display = serializers.CharField(source="get_session_display", read_only=True)
+    result_display = serializers.CharField(source="get_result_display", read_only=True)
+
+    class Meta:
+        model = EducationHistory
+        fields = (
+            "id",
+            "academic_year",
+            "registration_id",
+            "grade",
+            "grade_display",
+            "specialty",
+            "class_name",
+            "session",
+            "session_display",
+            "result",
+            "result_display",
+        )
 
 
 class UserSerializer(serializers.ModelSerializer):
+    education_histories = EducationHistorySerializer(many=True, read_only=True)
     role_display = serializers.CharField(source="get_role_display", read_only=True)
 
     class Meta:
@@ -19,9 +42,14 @@ class UserSerializer(serializers.ModelSerializer):
             "last_name",
             "role",
             "role_display",
+            "cin",
+            "diploma",
+            "date_of_birth",
+            "place_of_birth",
             "is_active",
             "is_staff",
             "date_joined",
+            "education_histories",
         )
         read_only_fields = ("id", "is_active", "is_staff", "date_joined", "role_display")
 
@@ -31,7 +59,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "password", "first_name", "last_name", "role")
+        fields = ("email", "password", "first_name", "last_name", "role", "cin", "date_of_birth", "place_of_birth")
 
     def validate_password(self, value):
         password_validation.validate_password(value, self.instance)
@@ -48,7 +76,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "password", "first_name", "last_name", "role", "is_active", "is_staff")
+        fields = ("email", "password", "first_name", "last_name", "role", "cin", "diploma", "date_of_birth", "place_of_birth", "is_active", "is_staff", "date_joined"   )
 
     def validate_password(self, value):
         password_validation.validate_password(value, self.instance)
@@ -68,7 +96,7 @@ class UserUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "password", "first_name", "last_name", "role", "is_active", "is_staff")
+        fields = ("email", "password", "first_name", "last_name", "role", "cin", "diploma", "date_of_birth", "place_of_birth", "is_active", "is_staff", "date_joined"   )
         read_only_fields = ("email",)  
 
     def validate_password(self, value):
@@ -151,4 +179,5 @@ class ResetPasswordSerializer(serializers.Serializer):
         user.set_password(self.validated_data["new_password"])
         user.save(update_fields=["password"])
         return user
+
 

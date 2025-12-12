@@ -42,6 +42,11 @@ GET /api/users/?search=john
     "last_name": "Doe",
     "role": "student",
     "role_display": "Étudiant",
+    "cin": 12345678,
+    "speciality": "Informatique",
+    "class_name": "L3-A",
+    "date_of_birth": "2000-01-01",
+    "place_of_birth": "Tunis",
     "modules": [...],
     "is_active": true,
     "is_staff": false,
@@ -54,6 +59,11 @@ GET /api/users/?search=john
     "last_name": "Smith",
     "role": "teacher",
     "role_display": "Enseignant",
+    "cin": 87654321,
+    "speciality": "Mathématiques",
+    "class_name": "",
+    "date_of_birth": "1985-05-15",
+    "place_of_birth": "Sfax",
     "modules": [...],
     "is_active": true,
     "is_staff": false,
@@ -80,6 +90,11 @@ GET /api/users/?search=john
   "first_name": "Alice",
   "last_name": "Johnson",
   "role": "teacher",
+  "cin": 11223344,
+  "speciality": "Physique",
+  "class_name": "",
+  "date_of_birth": "1990-03-20",
+  "place_of_birth": "Sousse",
   "is_active": true,
   "is_staff": false
 }
@@ -91,6 +106,11 @@ GET /api/users/?search=john
 - `first_name` (optional, string): User's first name
 - `last_name` (optional, string): User's last name
 - `role` (optional, string): User role - choices: `student`, `teacher`, `administrator`, `club_manager` (default: `student`)
+- `cin` (required, integer): User's CIN (must be unique)
+- `speciality` (optional, string): User's speciality
+- `class_name` (optional, string): User's class name
+- `date_of_birth` (optional, date): User's date of birth (YYYY-MM-DD)
+- `place_of_birth` (optional, string): User's place of birth
 - `is_active` (optional, boolean): Whether the account is active (default: `true`)
 - `is_staff` (optional, boolean): Whether the user can access admin panel (default: `false`)
 
@@ -105,6 +125,11 @@ GET /api/users/?search=john
     "last_name": "Johnson",
     "role": "teacher",
     "role_display": "Enseignant",
+    "cin": 11223344,
+    "speciality": "Physique",
+    "class_name": "",
+    "date_of_birth": "1990-03-20",
+    "place_of_birth": "Sousse",
     "modules": [...],
     "is_active": true,
     "is_staff": false,
@@ -145,6 +170,11 @@ GET /api/users/1/
   "last_name": "Doe",
   "role": "student",
   "role_display": "Étudiant",
+  "cin": 12345678,
+  "speciality": "Informatique",
+  "class_name": "L3-A",
+  "date_of_birth": "2000-01-01",
+  "place_of_birth": "Tunis",
   "modules": [
     {
       "code": "reclamations",
@@ -192,6 +222,7 @@ GET /api/users/1/
 ```json
 {
   "role": "administrator",
+  "cin": 99887766,
   "is_staff": true
 }
 ```
@@ -202,6 +233,11 @@ GET /api/users/1/
 - `first_name` (optional, string): User's first name
 - `last_name` (optional, string): User's last name
 - `role` (optional, string): User role
+- `cin` (optional, integer): User's CIN
+- `speciality` (optional, string): User's speciality
+- `class_name` (optional, string): User's class name
+- `date_of_birth` (optional, date): User's date of birth
+- `place_of_birth` (optional, string): User's place of birth
 - `is_active` (optional, boolean): Account active status
 - `is_staff` (optional, boolean): Admin panel access
 
@@ -216,6 +252,11 @@ GET /api/users/1/
     "last_name": "Doe Updated",
     "role": "teacher",
     "role_display": "Enseignant",
+    "cin": 11223344,
+    "speciality": "Physique",
+    "class_name": "",
+    "date_of_birth": "1990-03-20",
+    "place_of_birth": "Sousse",
     "modules": [...],
     "is_active": true,
     "is_staff": false,
@@ -278,6 +319,11 @@ DELETE /api/users/1/delete/
 | `is_active` | Boolean | Whether the user account is active |
 | `is_staff` | Boolean | Whether the user can access admin panel |
 | `date_joined` | DateTime | Account creation timestamp |
+| `cin` | Integer | User's CIN (unique) |
+| `speciality` | String | User's speciality |
+| `class_name` | String | User's class name |
+| `date_of_birth` | Date | User's date of birth |
+| `place_of_birth` | String | User's place of birth |
 
 
 

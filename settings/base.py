@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # Local
     "users",
     "reclamations",
+    "document_requests",
 ]
 
 MIDDLEWARE = [

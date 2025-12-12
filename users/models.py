@@ -36,15 +36,36 @@ class User(AbstractBaseUser, PermissionsMixin):
         ADMINISTRATOR = "administrator", "Responsable Administratif"
         CLUB_MANAGER = "club_manager", "Gestionnaire de Club"
 
+    class DiplomaChoices(models.TextChoices):
+        LISI = "Licence en Ingénierie des Systèmes Informatiques", "Licence en Ingénierie des Systèmes Informatiques"
+        LGMI = "Licence en Génie Mécanique", "Licence en Génie Mécanique"
+        LGE = "Licence en Génie énergétique", "Licence en Génie énergétique"
+        LEEA = "Licence en électronique électrotechnique & Automatique", "Licence en électronique électrotechnique & Automatique"
+        MRDS = "Master Recherche en data science", "Master Recherche en data science"
+        MRAII = "Master Recherche en Automatique & Informatique Industrielle", "Master Recherche en Automatique & Informatique Industrielle"
+        MPCI = "Master Professionnel en Commandes des Systémes Industriels", "Master Professionnel en Commandes des Systémes Industriels"
+        MPGMSI = "Master Professionnel en Gestion de Maintenance des Systémes Industriels", "Master Professionnel en Gestion de Maintenance des Systémes Industriels"
+        MPGM = "Master Professionnel en génie mécanique", "Master Professionnel en génie mécanique"
+
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
+    first_name_arabic = models.CharField(max_length=150, blank=True)
+    last_name_arabic = models.CharField(max_length=150, blank=True)
     role = models.CharField(
         max_length=32,
         choices=Role.choices,
         default=Role.STUDENT,
         help_text="Profil fonctionnel tel que défini dans le cahier des charges.",
     )
+    cin = models.IntegerField(unique=True, null=True, blank=True)
+    diploma = models.CharField(
+        max_length=80,
+        choices=DiplomaChoices.choices,
+        help_text="Diplôme obtenu par l'utilisateur.",
+    )
+    date_of_birth = models.DateField(blank=True, null=True) 
+    place_of_birth = models.CharField(max_length=150, blank=True) 
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
@@ -60,6 +81,45 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.email
+
+
+class EducationHistory(models.Model):
+    class Grade(models.TextChoices):
+        FIRST_YEAR = "1ere", "1ère année"
+        SECOND_YEAR = "2eme", "2ème année"
+        THIRD_YEAR = "3eme", "3ème année"
+
+    class Session(models.TextChoices):
+        PRINCIPALE = "principale", "Principale"
+        CONTROLE = "controle", "Contrôle"
+
+    class Result(models.TextChoices):
+        TRES_BIEN = "tres_bien", "Très Bien"
+        BIEN = "bien", "Bien"
+        ASSEZ_BIEN = "assez_bien", "Assez Bien"
+        PASSABLE = "passable", "Passable"
+        AJOURNE = "ajourne", "Ajourné"
+
+    student = models.ForeignKey(
+        User, 
+        on_delete=models.CASCADE, 
+        related_name="education_histories",
+        limit_choices_to={'role': User.Role.STUDENT}
+    )
+    academic_year = models.CharField(max_length=9, help_text="Ex: 2023-2024")
+    registration_id = models.IntegerField()
+    grade = models.CharField(max_length=10, choices=Grade.choices)
+    specialty = models.CharField(max_length=100)
+    class_name = models.CharField(max_length=50)
+    session = models.CharField(max_length=20, choices=Session.choices)
+    result = models.CharField(max_length=20, choices=Result.choices)
+
+    class Meta:
+        ordering = ("-academic_year",)
+        verbose_name_plural = "Education histories"
+
+    def __str__(self):
+        return f"{self.student} - {self.class_name} ({self.academic_year})"
 
 
 
