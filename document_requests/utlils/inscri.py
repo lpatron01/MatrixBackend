@@ -6,7 +6,10 @@ from reportlab.lib.colors import HexColor
 from arabic_reshaper import arabic_reshaper
 from bidi.algorithm import get_display
 import os
+import logging
+from django.conf import settings
 
+logger = logging.getLogger(__name__)
 
 class KairouanTarsimCertificateGenerator:
     TEXTS = {
@@ -17,7 +20,7 @@ class KairouanTarsimCertificateGenerator:
                 "جامعة القيروان",
             ],
             'institute': "المعهد العالي للعلوم التطبيقية والتكنولوجيا بالقيروان",
-            'main_title': "شهادة حضور",
+            'main_title': "شهادة ترسيم",
             'opening': "يشهد الكاتب العام لـ المعهد العالي للعلوم التطبيقية والتكنولوجيا بالقيروان أن الطالب :",
             'name_label': "الاسم :",
             'surname_label': "اللقب :",
@@ -27,8 +30,7 @@ class KairouanTarsimCertificateGenerator:
             'cert_label': "الشهادة :",
             'spec_label': "الاختصاص :",
             'reg_label': "تحت رقم :",
-            'closing': "يحضر الطالب دروسه بانتظام ويتواجد فيها بشكل منتظم.",
-            'delivery': "سلمت هذه الشهادة إلى المعني بالأمر للإدلاء بها لدى من له النظر.",
+            'closing': "وذلك بالنسبة إلى السنة الجامعية الحالية.",
             'location': "القيروان في",
             'signature_title': "الكاتب العام",
             'footer_notice': "هام : لا تسلم هذه الشهادة الا مرة واحدة",
@@ -43,8 +45,8 @@ class KairouanTarsimCertificateGenerator:
                 "Université de Kairouan",
             ],
             'institute': "Institut Supérieur des Sciences Appliquées et de Technologie de Kairouan",
-            'main_title': "Attestation de Présence",
-            'opening': "Le Secrétaire Général de l'Institut Supérieur des Sciences Appliquées et de Technologie de Kairouan atteste que l'étudiant(e) :",
+            'main_title': "Attestation d'Inscription",
+            'opening': "Le Secrétaire Général de l'Institut Supérieur des Sciences Appliquées et de Technologie de Kairouan certifie que l'étudiant(e):",
             'name_label': "Prénom :",
             'surname_label': "Nom :",
             'birth_label': "Né(e) le :",
@@ -53,8 +55,7 @@ class KairouanTarsimCertificateGenerator:
             'cert_label': "Diplôme :",
             'spec_label': "Spécialité :",
             'reg_label': "Sous le numéro :",
-            'closing': "L’étudiant(e) assiste régulièrement à ses cours.",
-            'delivery': "Ce certificat est délivré à l'intéressé(e) pour servir et valoir ce que de droit.",
+            'closing': "Et ce, pour l'année universitaire en cours.",
             'location': "Kairouan, le",
             'signature_title': "Le Secrétaire Général",
             'footer_notice': "Important : Ce certificat n'est délivré qu'une seule fois",
@@ -62,7 +63,7 @@ class KairouanTarsimCertificateGenerator:
             'contact2': "Tél : 73683100  Fax : 77235333",
             'contact3': "Adresse électronique : www.issatkr.rnu.tn",
             'fr_opening_title': "Le Secrétaire Général de l'Institut Supérieur des Sciences Appliquées",
-            'fr_opening_institute': " et de Technologie de Kairouan atteste que l'étudiant(e) :",
+            'fr_opening_institute': " et de Technologie de Kairouan certifie que l'étudiant(e):",
         }
     }
 
@@ -72,21 +73,27 @@ class KairouanTarsimCertificateGenerator:
         font_path: Path to an Arabic-compatible font (e.g., Arial, Amiri, Scheherazade)
         bold_font_path: Path to bold version of the font (optional)
         """
+        # Construct paths for fonts using BASE_DIR (same as demande.py)
+        absolute_font_path = os.path.join(settings.BASE_DIR, 'document_requests', 'fonts', font_path)
+        absolute_bold_font_path = None
+        if bold_font_path:
+            absolute_bold_font_path = os.path.join(settings.BASE_DIR, 'document_requests', 'fonts', bold_font_path)
+
         # Register Arabic font
-        if os.path.exists(font_path):
-            pdfmetrics.registerFont(TTFont('Arabic', font_path))
+        if os.path.exists(absolute_font_path):
+            pdfmetrics.registerFont(TTFont('Arabic', absolute_font_path))
             self.has_font = True
-            print(f"Font loaded successfully: {font_path}")
+            logger.info(f"Font loaded successfully: {absolute_font_path}")
             
             # Register bold font if available
-            if bold_font_path and os.path.exists(bold_font_path):
-                pdfmetrics.registerFont(TTFont('ArabicBold', bold_font_path))
+            if absolute_bold_font_path and os.path.exists(absolute_bold_font_path):
+                pdfmetrics.registerFont(TTFont('ArabicBold', absolute_bold_font_path))
                 self.has_bold_font = True
-                print(f"Bold font loaded successfully: {bold_font_path}")
+                logger.info(f"Bold font loaded successfully: {absolute_bold_font_path}")
             else:
                 self.has_bold_font = False
         else:
-            print(f"ERROR: Font file '{font_path}' not found!")
+            logger.error(f"ERROR: Font file '{absolute_font_path}' not found! Please ensure 'Amiri-Regular.ttf' and 'Amiri-Bold.ttf' (or other specified fonts) are in the 'backend/document_requests/fonts/' directory.")
             self.has_font = False
             self.has_bold_font = False
     
@@ -98,7 +105,7 @@ class KairouanTarsimCertificateGenerator:
                 bidi_text = get_display(reshaped)
                 return bidi_text
             except Exception as e:
-                print(f"Error reshaping text: {e}")
+                logger.error(f"Error reshaping text: {e}")
                 return text
         else:
             return text
@@ -108,7 +115,7 @@ class KairouanTarsimCertificateGenerator:
         width, _ = A4
         font_normal = 'Arabic' if self.has_font else 'Helvetica'
         font_bold = 'ArabicBold' if self.has_bold_font else 'Arabic'
-
+        
         if alanguage == 'fr':
             # LTR: label (normal) left then value (bold) right after
             c.setFont(font_normal, font_size)
@@ -239,7 +246,7 @@ class KairouanTarsimCertificateGenerator:
         """
         
         if not self.has_font:
-            print("Cannot generate certificate without Arabic font!")
+            logger.error("Cannot generate certificate without Arabic font!")
             return
         
         # Create PDF - FULL A4 size
@@ -248,7 +255,6 @@ class KairouanTarsimCertificateGenerator:
         c = canvas.Canvas(output_path, pagesize=A4)
         
         t = self.TEXTS[alanguage]
-
         # HEADER - Top Right Corner (small text) - LIKE FIRST REFERENCE CODE
         y_pos = page_height - 60
         header_size = 12
@@ -267,13 +273,13 @@ class KairouanTarsimCertificateGenerator:
         institute_text = self.reshape_arabic(t['institute'], alanguage)
         self.draw_centered_text(c, institute_text, y_pos, 14, is_bold=False)
         
-        # MAIN TITLE - شهادة حضور
-        y_pos -= 40
+        # MAIN TITLE - شهادة ترسيم
+        y_pos -= 50
         main_title = self.reshape_arabic(t['main_title'], alanguage)
         self.draw_centered_text(c, main_title, y_pos, 28, is_bold=True)
         
         # Year
-        y_pos -= 40
+        y_pos -= 45
         year_text = params.get('year', '2024 - 2025')
         self.draw_centered_text(c, year_text, y_pos, 18, is_bold=True)
         
@@ -327,7 +333,7 @@ class KairouanTarsimCertificateGenerator:
         
         y_pos -= 35
         cert_label = t['cert_label']
-        cert_value = params.get('certificate_type', 'الإجازة في علوم الإعلامية' if alanguage=='ar' else 'Licence en Informatique')
+        cert_value = params.get('certificate_type', 'الإجازة في علوم الإعلامية' if alanguage=='ar' else "Licence en Informatique")
         self.draw_text_label_normal_value_bold(c, cert_label, cert_value, y_pos, body_font_size, x_margin, alanguage)
         
         y_pos -= 35
@@ -346,16 +352,8 @@ class KairouanTarsimCertificateGenerator:
             self.draw_right_text(c, closing, y_pos, body_font_size, x_margin, is_bold=False)
         else:
             self.draw_left_text(c, closing, y_pos, body_font_size, x_margin, is_bold=False)
-
-        # Delivery statement
-        y_pos -= 40
-        delivery = self.reshape_arabic(t['delivery'], alanguage)
-        if alanguage == 'ar':
-            self.draw_right_text(c, delivery, y_pos, 12, x_margin)
-        else:
-            self.draw_left_text(c, delivery, y_pos, 12, x_margin)
         
-        # Date and signature - LEFT ALIGNED with space for signature
+        # Date and signature - LEFT ALIGNED
         y_pos -= 45
         
         # FIXED: Use the same method as in the reference code
@@ -366,28 +364,22 @@ class KairouanTarsimCertificateGenerator:
         location_shaped = self.reshape_arabic(location_full, alanguage)
         self.draw_left_text(c, location_shaped, y_pos, 14, x_margin=60, is_bold=False)
         
-        # Adjust the spacing here - reduced from 30 to 15 for "الكاتب العام"
-        y_pos -= 15  # Reduced spacing for the title
-        
-        # Draw "الكاتب العام" title
+        y_pos -= 30
         signature_title = self.reshape_arabic(t['signature_title'], alanguage)
         self.draw_left_text(c, signature_title, y_pos, 14, x_margin=60, is_bold=False)
         
-        # Add SPACE AFTER "الكاتب العام" (approximately 2cm = ~57 points)
-        # You can adjust this value: 57 points ≈ 2cm
-        space_after_signature_title = 57
-        
-        # Calculate new position for footer
-        y_pos -= space_after_signature_title
+        # Add space after signature title to prevent overlap with footer notice
+        y_pos -= 30 # Increased spacing to account for footer notice
         
         # FOOTER - Bottom Right Corner - LIKE FIRST REFERENCE CODE
+        # Removed fixed y_pos = 120 to prevent overlap
         
         # Important notice (right aligned)
         footer_notice = self.reshape_arabic(t['footer_notice'], alanguage)
         if alanguage == 'ar':
             self.draw_right_text(c, footer_notice, y_pos, 12, x_margin=60, is_bold=True)
         else:
-            self.draw_left_text(c, footer_notice, y_pos, 12, x_margin=60, is_bold=True)
+            self.draw_left_text_wrapped(c, footer_notice, y_pos, 12, x_margin=60, is_bold=True)
         
         # Horizontal line
         y_pos -= 15
@@ -400,106 +392,27 @@ class KairouanTarsimCertificateGenerator:
         if alanguage == 'ar':
             self.draw_right_text(c, contact1, y_pos, 10, x_margin=60)
         else:
-            self.draw_left_text(c, contact1, y_pos, 10, x_margin=60)
+            self.draw_left_text_wrapped(c, contact1, y_pos, 10, x_margin=60)
         
         y_pos -= 18
         contact2 = self.reshape_arabic(t['contact2'], alanguage)
         if alanguage == 'ar':
             self.draw_right_text(c, contact2, y_pos, 10, x_margin=60)
         else:
-            self.draw_left_text(c, contact2, y_pos, 10, x_margin=60)
+            self.draw_left_text_wrapped(c, contact2, y_pos, 10, x_margin=60)
         
         y_pos -= 18
         contact3 = self.reshape_arabic(t['contact3'], alanguage)
         if alanguage == 'ar':
             self.draw_right_text(c, contact3, y_pos, 10, x_margin=60)
         else:
-            self.draw_left_text(c, contact3, y_pos, 10, x_margin=60)
+            self.draw_left_text_wrapped(c, contact3, y_pos, 10, x_margin=60)
         
         # Save PDF
         c.save()
-        print(f"✓ Certificate generated successfully: {output_path}")
-        print(f"  Type: {t['main_title']} ({'Attestation de Présence' if alanguage=='fr' else 'شهادة حضور'})")
-        print(f"  Layout: Values in BOLD, labels in normal")
-        print(f"  Header/Footer: {'Left' if alanguage=='fr' else 'Right'} Corner")
-        print(f"  Date format: '{location_full}' (place then date)")
-        print(f"  Space after 'الكاتب العام': {space_after_signature_title} points (~2cm)")
-
-
-# Example usage
-if __name__ == "__main__":
-    # Try to find available fonts
-    font_paths = [
-        'Amiri-Regular.ttf', 
-        'arial.ttf', 
-        'NotoNaskhArabic-Regular.ttf', 
-        'Scheherazade-Regular.ttf'
-    ]
-    
-    bold_font_paths = [
-        'Amiri-Bold.ttf',
-        'arialbd.ttf',
-        'NotoNaskhArabic-Bold.ttf',
-        'Scheherazade-Bold.ttf'
-    ]
-    
-    font_file = None
-    bold_font_file = None
-    
-    for font in font_paths:
-        if os.path.exists(font):
-            font_file = font
-            break
-    
-    for bold_font in bold_font_paths:
-        if os.path.exists(bold_font):
-            bold_font_file = bold_font
-            break
-    
-    if font_file is None:
-        print("\n" + "="*70)
-        print("ERROR: No Arabic font found!")
-        print("="*70)
-        print("\nPlease download an Arabic font:")
-        print("1. Amiri: https://fonts.google.com/specimen/Amiri")
-        print("   - Download both Amiri-Regular.ttf and Amiri-Bold.ttf")
-        print("2. Scheherazade: https://software.sil.org/scheherazade/")
-        print("3. Noto Naskh Arabic: https://fonts.google.com/noto/specimen/Noto+Naskh+Arabic")
-        print("\nPlace the TTF files in the same directory as this script.")
-        print("="*70 + "\n")
-        exit(1)
-    
-    # Initialize generator
-    generator = KairouanTarsimCertificateGenerator(font_file, bold_font_file)
-    
-    # Certificate data - EXACT match from the image (VALUES WILL BE BOLD)
-    certificate_data = {
-        'name': 'أحمد خليل',  # BOLD
-        'surname': 'ورشي',  # BOLD
-        'birth_date': '2004/01/28',  # BOLD
-        'birth_place': 'ساقية سيدي يوسف',  # BOLD
-        'national_id': '14440542',  # BOLD
-        'year_class': 'الثالثة',  # BOLD (Third year)
-        'registration_code': 'GLSI3 A',  # BOLD
-        'certificate_type': 'الإجازة في علوم الإعلامية',  # BOLD
-        'specialization': 'هندسة البرمجيات ونظم المعلومات',  # BOLD
-        'registration_number': '22003013',  # BOLD
-        'year': '2024 - 2025',  # BOLD
-        'issue_date': '2024/09/18',  # BOLD
-        'signature_name': 'عثمان عثمان'  # Normal (optional)
-    }
-    
-    # Generate Arabic
-    generator.generate_certificate('certificate_7outhour_ar.pdf', alanguage='ar', **certificate_data)
-    # Generate French
-    certificate_data_fr = certificate_data.copy()
-    certificate_data_fr.update({
-        'name': 'Ahmed Khalil',
-        'surname': 'Ouergui',
-        'birth_place': 'Sakiet Sidi Youssef',
-        'year_class': 'Troisième',
-        'certificate_type': 'Licence en Informatique',
-        'specialization': "Génie Logiciel et Systèmes d'Information",
-        'issue_date': '18/09/2024',
-    })
-    generator.generate_certificate('certificate_7outhour_fr.pdf', alanguage='fr', **certificate_data_fr)
+        logger.info(f"✓ Certificate generated successfully: {output_path}")
+        logger.info(f"  Type: {t['main_title']} ({'Registration Certificate' if alanguage=='fr' else 'شهادة ترسيم'})")
+        logger.info(f"  Layout: Values in BOLD, labels in normal")
+        logger.info(f"  Header/Footer: {'Left' if alanguage=='fr' else 'Right'} Corner")
+        logger.info(f"  Date format: '{location_full}' (place then date)")
+        return True

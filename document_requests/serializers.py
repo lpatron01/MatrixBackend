@@ -17,7 +17,7 @@ class DocumentRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = DocumentRequest
         fields = [
-            'id', 'student', 'document_type', 'status', 'additional_info', 
+            'id', 'student', 'document_type', 'status', 'additional_info', 'academic_year', 
             'created_at', 'updated_at', 'history', 'language', 'reception_type'
         ]
         read_only_fields = ['id', 'created_at', 'updated_at', 'status', 'history']
@@ -27,7 +27,7 @@ class DocumentRequestCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DocumentRequest
-        fields = ['id', 'document_type', 'language', 'reception_type']
+        fields = ['id', 'document_type', 'language', 'reception_type', 'academic_year']
 
 class DocumentRequestAdminUpdateSerializer(serializers.ModelSerializer):
     comment = serializers.CharField(write_only=True, required=False)

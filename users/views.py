@@ -1,6 +1,7 @@
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db import models
+from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
@@ -10,7 +11,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.views import TokenObtainPairView
 
-from .models import User
+from .models import User, EducationHistory
 from .serializers import (
     ForgotPasswordSerializer,
     LoginSerializer,
@@ -20,6 +21,7 @@ from .serializers import (
     UserCreateSerializer,
     UserSerializer,
     UserUpdateSerializer,
+    EducationHistorySerializer,
 )
 
 
@@ -117,6 +119,88 @@ class ResetPasswordView(generics.GenericAPIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response({"detail": "Password has been reset."})
+
+
+class EducationHistoryCreateView(generics.CreateAPIView):
+    """
+    POST /api/users/<user_pk>/education-history/
+    Create a new education history record for a specific user (Admin only)
+    """
+    serializer_class = EducationHistorySerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def perform_create(self, serializer):
+        user = get_object_or_404(User, pk=self.kwargs["user_pk"])
+        if user.role != User.Role.STUDENT:
+            raise serializers.ValidationError("Only students can have education history.")
+        serializer.save(student=user)
+
+
+class EducationHistoryListView(generics.ListAPIView):
+    """
+    GET /api/users/<user_pk>/education-history/
+    List all education history records for a specific user (Admin only)
+    """
+    serializer_class = EducationHistorySerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def get_queryset(self):
+        user = get_object_or_404(User, pk=self.kwargs["user_pk"])
+        return user.education_histories.all()
+
+
+class EducationHistoryDetailView(generics.RetrieveAPIView):
+    """
+    GET /api/users/<user_pk>/education-history/<pk>/
+    Retrieve a specific education history record for a specific user (Admin only)
+    """
+    serializer_class = EducationHistorySerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def get_queryset(self):
+        user = get_object_or_404(User, pk=self.kwargs["user_pk"])
+        return user.education_histories.all()
+
+
+class EducationHistoryUpdateView(generics.UpdateAPIView):
+    """
+    PUT/PATCH /api/users/<user_pk>/education-history/<pk>/update/
+    Update a specific education history record for a specific user (Admin only)
+    """
+    serializer_class = EducationHistorySerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def get_queryset(self):
+        user = get_object_or_404(User, pk=self.kwargs["user_pk"])
+        return user.education_histories.all()
+
+    def perform_update(self, serializer):
+        user = get_object_or_404(User, pk=self.kwargs["user_pk"])
+        if user.role != User.Role.STUDENT:
+            raise serializers.ValidationError("Only students can have education history.")
+        serializer.save(student=user)
+
+
+class EducationHistoryDeleteView(generics.DestroyAPIView):
+    """
+    DELETE /api/users/<user_pk>/education-history/<pk>/delete/
+    Delete a specific education history record for a specific user (Admin only)
+    """
+    serializer_class = EducationHistorySerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def get_queryset(self):
+        user = get_object_or_404(User, pk=self.kwargs["user_pk"])
+        return user.education_histories.all()
+
+    def perform_destroy(self, instance):
+        student_email = instance.student.email
+        academic_year = instance.academic_year
+        instance.delete()
+        return Response(
+            {"detail": f"Education history record for '{student_email}' for academic year '{academic_year}' deleted successfully."},
+            status=status.HTTP_200_OK
+        )
 
 
 # ============================================================================

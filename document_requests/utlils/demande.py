@@ -213,7 +213,7 @@ def generate_document_request_pdf(document_request):
     y_pos -= 28  # Adjusted for increased spacing after subtitle
     draw_text_label_normal_value_bold(c, t['name_label'], f"{document_request.student.first_name} {document_request.student.last_name}", y_pos, body_font_size, x_margin)
     y_pos -= 25  # Increased line spacing
-    draw_text_label_normal_value_bold(c, t['cin_label'], document_request.student.cin if document_request.student.cin else 'N/A', y_pos, body_font_size, x_margin)
+    draw_text_label_normal_value_bold(c, t['cin_label'], str(document_request.student.cin) if document_request.student.cin else 'N/A', y_pos, body_font_size, x_margin)
     y_pos -= 25  # Increased line spacing
     draw_text_label_normal_value_bold(c, t['email_label'], document_request.student.email, y_pos, body_font_size, x_margin)
 

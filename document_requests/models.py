@@ -54,6 +54,7 @@ class DocumentRequest(models.Model):
         choices=ReceptionType.choices,
         default=ReceptionType.BOTH
     )
+    academic_year = models.CharField(max_length=9, help_text="Ex: 2023-2024", default="2025-2026")
     additional_info = models.TextField(blank=True, null=True)
     pdf_file = models.FileField(upload_to='document_requests/pdfs/demandes/', null=True, blank=True, max_length=255)
     pdf_requested_file = models.FileField(upload_to='document_requests/pdfs/requested/', null=True, blank=True, max_length=255)

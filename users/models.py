@@ -37,17 +37,50 @@ class User(AbstractBaseUser, PermissionsMixin):
         CLUB_MANAGER = "club_manager", "Gestionnaire de Club"
 
     class DiplomaChoices(models.TextChoices):
-        LISI = "Licence en Ingénierie des Systèmes Informatiques", "Licence en Ingénierie des Systèmes Informatiques"
-        LGMI = "Licence en Génie Mécanique", "Licence en Génie Mécanique"
-        LGE = "Licence en Génie énergétique", "Licence en Génie énergétique"
-        LEEA = "Licence en électronique électrotechnique & Automatique", "Licence en électronique électrotechnique & Automatique"
-        MRDS = "Master Recherche en data science", "Master Recherche en data science"
-        MRAII = "Master Recherche en Automatique & Informatique Industrielle", "Master Recherche en Automatique & Informatique Industrielle"
-        MPCI = "Master Professionnel en Commandes des Systémes Industriels", "Master Professionnel en Commandes des Systémes Industriels"
-        MPGMSI = "Master Professionnel en Gestion de Maintenance des Systémes Industriels", "Master Professionnel en Gestion de Maintenance des Systémes Industriels"
-        MPGM = "Master Professionnel en génie mécanique", "Master Professionnel en génie mécanique"
+        LISI = "Licence en Ingénierie des Systèmes Informatiques", "إجازة في هندسة أنظمة المعلومات"
+        LGMI = "Licence en Génie Mécanique", "إجازة في الهندسة الميكانيكية"
+        LGE = "Licence en Génie énergétique", "إجازة في الهندسة الطاقية"
+        LEEA = "Licence en électronique électrotechnique & Automatique", "إجازة في الإلكترونيات الكهرتقنية والآلية"
+        MRDS = "Master Recherche en data science", "ماجستير بحث في علوم البيانات"
+        MRAII = "Master Recherche en Automatique & Informatique Industrielle", "ماجستير بحث في الآلية والحوسبة الصناعية"
+        MPCI = "Master Professionnel en Commandes des Systémes Industriels", "ماجستير مهني في قيادة الأنظمة الصناعية"
+        MPGMSI = "Master Professionnel en Gestion de Maintenance des Systémes Industriels", "ماجستير مهني في إدارة صيانة الأنظمة الصناعية"
+        MPGM = "Master Professionnel en génie mécanique", "ماجستير مهني في الهندسة الميكانيكية"
+
+        @classmethod
+        def get_diploma_display_by_language(cls, diploma_value, language):
+            """Get diploma display based on language"""
+            french_names = {
+                cls.LISI.value: "Licence en Ingénierie des Systèmes Informatiques",
+                cls.LGMI.value: "Licence en Génie Mécanique",
+                cls.LGE.value: "Licence en Génie énergétique",
+                cls.LEEA.value: "Licence en électronique électrotechnique & Automatique",
+                cls.MRDS.value: "Master Recherche en data science",
+                cls.MRAII.value: "Master Recherche en Automatique & Informatique Industrielle",
+                cls.MPCI.value: "Master Professionnel en Commandes des Systémes Industriels",
+                cls.MPGMSI.value: "Master Professionnel en Gestion de Maintenance des Systémes Industriels",
+                cls.MPGM.value: "Master Professionnel en génie mécanique",
+            }
+
+            arabic_names = {
+                cls.LISI.value: "إجازة في هندسة أنظمة المعلومات",
+                cls.LGMI.value: "إجازة في الهندسة الميكانيكية",
+                cls.LGE.value: "إجازة في الهندسة الطاقية",
+                cls.LEEA.value: "إجازة في الإلكترونيات الكهرتقنية والآلية",
+                cls.MRDS.value: "ماجستير بحث في علوم البيانات",
+                cls.MRAII.value: "ماجستير بحث في الآلية والحوسبة الصناعية",
+                cls.MPCI.value: "ماجستير مهني في قيادة الأنظمة الصناعية",
+                cls.MPGMSI.value: "ماجستير مهني في إدارة صيانة الأنظمة الصناعية",
+                cls.MPGM.value: "ماجستير مهني في الهندسة الميكانيكية",
+            }
+
+            if language == 'ar':
+                return arabic_names.get(diploma_value, diploma_value)
+            else:  # Default to French
+                return french_names.get(diploma_value, diploma_value)
 
     email = models.EmailField(unique=True)
+    cin = models.IntegerField(unique=True, null=True, blank=True)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
     first_name_arabic = models.CharField(max_length=150, blank=True)
@@ -58,14 +91,15 @@ class User(AbstractBaseUser, PermissionsMixin):
         default=Role.STUDENT,
         help_text="Profil fonctionnel tel que défini dans le cahier des charges.",
     )
-    cin = models.IntegerField(unique=True, null=True, blank=True)
+
     diploma = models.CharField(
         max_length=80,
         choices=DiplomaChoices.choices,
         help_text="Diplôme obtenu par l'utilisateur.",
     )
     date_of_birth = models.DateField(blank=True, null=True) 
-    place_of_birth = models.CharField(max_length=150, blank=True) 
+    place_of_birth = models.CharField(max_length=150, blank=True)
+    place_of_birth_arabic = models.CharField(max_length=150, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     date_joined = models.DateTimeField(default=timezone.now)
@@ -82,12 +116,45 @@ class User(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
+    def add_education_history(self, academic_year, registration_id, grade, specialty, class_name, session, result):
+        if self.role != self.Role.STUDENT:
+            raise ValueError("Only students can have education history.")
+        return self.education_histories.create(
+            academic_year=academic_year,
+            registration_id=registration_id,
+            grade=grade,
+            specialty=specialty,
+            class_name=class_name,
+            session=session,
+            result=result,
+        )
+
 
 class EducationHistory(models.Model):
     class Grade(models.TextChoices):
-        FIRST_YEAR = "1ere", "1ère année"
-        SECOND_YEAR = "2eme", "2ème année"
-        THIRD_YEAR = "3eme", "3ème année"
+        FIRST_YEAR = "1", "Première année"
+        SECOND_YEAR = "2", "Deuxième année"
+        THIRD_YEAR = "3", "Troisième année"
+
+        @classmethod
+        def get_grade_display_by_language(cls, grade_value, language):
+            """Get grade display based on language"""
+            french_names = {
+                cls.FIRST_YEAR.value: "Première année",
+                cls.SECOND_YEAR.value: "Deuxième année",
+                cls.THIRD_YEAR.value: "Troisième année",
+            }
+
+            arabic_names = {
+                cls.FIRST_YEAR.value: "السنة الأولى",
+                cls.SECOND_YEAR.value: "السنة الثانية",
+                cls.THIRD_YEAR.value: "السنة الثالثة",
+            }
+
+            if language == 'ar':
+                return arabic_names.get(grade_value, grade_value)
+            else:  # Default to French
+                return french_names.get(grade_value, grade_value)
 
     class Session(models.TextChoices):
         PRINCIPALE = "principale", "Principale"
@@ -109,7 +176,7 @@ class EducationHistory(models.Model):
     academic_year = models.CharField(max_length=9, help_text="Ex: 2023-2024")
     registration_id = models.IntegerField()
     grade = models.CharField(max_length=10, choices=Grade.choices)
-    specialty = models.CharField(max_length=100)
+    specialty = models.CharField(max_length=100,default="Tronc Commun")
     class_name = models.CharField(max_length=50)
     session = models.CharField(max_length=20, choices=Session.choices)
     result = models.CharField(max_length=20, choices=Result.choices)
