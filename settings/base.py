@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "users",
     "reclamations",
     "document_requests",
+    "classroom",
 ]
 
 MIDDLEWARE = [
