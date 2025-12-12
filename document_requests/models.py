@@ -55,7 +55,8 @@ class DocumentRequest(models.Model):
         default=ReceptionType.BOTH
     )
     additional_info = models.TextField(blank=True, null=True)
-    pdf_file = models.FileField(upload_to='document_requests/pdfs/', null=True, blank=True, max_length=255)
+    pdf_file = models.FileField(upload_to='document_requests/pdfs/demandes/', null=True, blank=True, max_length=255)
+    pdf_requested_file = models.FileField(upload_to='document_requests/pdfs/requested/', null=True, blank=True, max_length=255)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

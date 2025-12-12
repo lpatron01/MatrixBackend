@@ -4,7 +4,8 @@ from .models import DocumentRequest
 from .serializers import (
     DocumentRequestSerializer, 
     DocumentRequestCreateSerializer, 
-    DocumentRequestAdminUpdateSerializer
+    DocumentRequestAdminUpdateSerializer,
+    DocumentRequestedFileSerializer
 )
 from users.models import User
 from .utlils.demande import generate_document_request_pdf
@@ -132,3 +133,17 @@ class DocumentRequestFileView(generics.RetrieveAPIView):
             return FileResponse(instance.pdf_file.open(), content_type='application/pdf')
         except FileNotFoundError:
             raise Http404("PDF file not found on the server.")
+
+class DocumentRequestUploadFileView(generics.UpdateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
+    lookup_field = 'public_id'
+    serializer_class = DocumentRequestedFileSerializer
+
+    def get_queryset(self):
+        return DocumentRequest.objects.all()
+
+    def perform_update(self, serializer):
+        user = self.request.user
+        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+            raise permissions.PermissionDenied("You do not have permission to upload this file.")
+        serializer.save()

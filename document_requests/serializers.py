@@ -52,3 +52,9 @@ class DocumentRequestAdminUpdateSerializer(serializers.ModelSerializer):
                 comment=comment
             )
         return instance
+
+class DocumentRequestedFileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DocumentRequest
+        fields = ['pdf_requested_file']
+        read_only_fields = ['public_id', 'student', 'document_type', 'status', 'language', 'reception_type', 'additional_info', 'pdf_file', 'created_at', 'updated_at']

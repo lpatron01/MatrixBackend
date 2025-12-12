@@ -122,7 +122,7 @@ Met à jour le statut d'une demande de document à `IN_PROGRESS` (En cours). Seu
 **Réponse (200 OK) :** L'objet de demande de document mis à jour.
 
 ### 8. Télécharger le fichier PDF d'une demande de document (Admin/Personnel uniquement)
-**GET** `/api/documents/demandes/{id}/file`
+**GET** `/api/documents/demandes/{id}/prefile`
 
 Permet aux administrateurs et au personnel de télécharger le fichier PDF associé à une demande de document spécifique.
 
@@ -131,3 +131,37 @@ Permet aux administrateurs et au personnel de télécharger le fichier PDF assoc
 
 **Réponse (200 OK) :** Le fichier PDF de la demande de document est retourné directement (content-type: `application/pdf`).
 En cas d'absence de fichier PDF ou si l'utilisateur n'a pas les permissions, un statut 404 ou 403 sera retourné.
+
+### 9. Télécharger le fichier PDF demandé par l'admin d'une demande de document (Admin/Personnel uniquement)
+**PUT/PATCH** `/api/documents/demandes/{id}/file`
+
+Permet aux administrateurs et au personnel de télécharger le fichier PDF demandé dans le champ `pdf_requested_file` pour une demande de document spécifique.
+
+**Paramètres d'URL :**
+  - `{id}`: Le `public_id` (UUID) de la demande de document.
+
+**Corps de la requête (multipart/form-data) :**
+```
+Content-Disposition: form-data; name="pdf_requested_file"; filename="example.pdf"
+Content-Type: application/pdf
+
+<binary content of the PDF file>
+```
+
+**Réponse (200 OK) :** L'objet de demande de document mis à jour, incluant le chemin du fichier PDF téléversé.
+```json
+{
+    "id": "<uuid>",
+    "student": <student_details>,
+    "document_type": "<document_type>",
+    "status": "<status>",
+    "additional_info": "<additional_info>",
+    "created_at": "<datetime>",
+    "updated_at": "<datetime>",
+    "history": [],
+    "language": "<language>",
+    "reception_type": "<reception_type>",
+    "pdf_file": "<path_to_original_pdf>",
+    "pdf_requested_file": "<path_to_uploaded_pdf>"
+}
+```
