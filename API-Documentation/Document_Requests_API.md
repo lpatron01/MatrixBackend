@@ -221,10 +221,6 @@ Permet de générer et télécharger un certificat d'inscription au format PDF p
   - La demande de document doit être de type `CERTIFICATE_INSCRIPTION`.
   - L'étudiant doit avoir un historique éducatif pour l'année académique spécifiée.
 
-**Effets :**
-  - Le certificat généré est automatiquement sauvegardé dans le champ `pdf_requested_file` de la demande de document.
-  - Le statut de la demande est automatiquement mis à jour à `READY`.
-
 **Réponse (200 OK) :** Le fichier PDF du certificat d'inscription est retourné directement (content-type: `application/pdf`).
 En cas d'absence de fichier PDF, de type de document incorrect, de permissions insuffisantes, ou de données manquantes, un statut 404 ou 403 sera retourné.
 
@@ -247,10 +243,6 @@ Permet de générer et télécharger un certificat de présence au format PDF po
   - La demande de document doit être de type `CERTIFICATE_PRESENCE`.
   - L'étudiant doit avoir un historique éducatif pour l'année académique spécifiée.
 
-**Effets :**
-  - Le certificat généré est automatiquement sauvegardé dans le champ `pdf_requested_file` de la demande de document.
-  - Le statut de la demande est automatiquement mis à jour à `READY`.
-
 **Réponse (200 OK) :** Le fichier PDF du certificat de présence est retourné directement (content-type: `application/pdf`).
 En cas d'absence de fichier PDF, de type de document incorrect, de permissions insuffisantes, ou de données manquantes, un statut 404 ou 403 sera retourné.
 
@@ -272,10 +264,6 @@ Permet de générer et télécharger un certificat de réussite au format PDF po
 **Conditions :**
   - La demande de document doit être de type `CERTIFICATE_SUCCESS`.
   - L'étudiant doit avoir un historique éducatif pour l'année académique spécifiée.
-
-**Effets :**
-  - Le certificat généré est automatiquement sauvegardé dans le champ `pdf_requested_file` de la demande de document.
-  - Le statut de la demande est automatiquement mis à jour à `READY`.
 
 **Réponse (200 OK) :** Le fichier PDF du certificat de réussite est retourné directement (content-type: `application/pdf`).
 En cas d'absence de fichier PDF, de type de document incorrect, de permissions insuffisantes, ou de données manquantes, un statut 404 ou 403 sera retourné.

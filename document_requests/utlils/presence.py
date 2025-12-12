@@ -87,7 +87,7 @@ class KairouanTarsimCertificateGenerator:
             pdfmetrics.registerFont(TTFont('Arabic', absolute_font_path))
             self.has_font = True
             logger.info(f"Font loaded successfully: {absolute_font_path}")
-
+            
             # Register bold font if available
             if absolute_bold_font_path and os.path.exists(absolute_bold_font_path):
                 pdfmetrics.registerFont(TTFont('ArabicBold', absolute_bold_font_path))
@@ -242,21 +242,21 @@ class KairouanTarsimCertificateGenerator:
         """
         Generate شهادة حضور certificate PDF - EXACT COPY of the image structure
         Parameters: name, surname, birth_date, birth_place, national_id,
-        year_class, registration_code, certificate_type, specialization,
+        year_class, registration_code, certificate_type, specialization, 
         registration_number, year, issue_date, signature_name
-
+        
         ALL PARAMETER VALUES ARE DISPLAYED IN BOLD (labels in normal)
         """
-
+        
         if not self.has_font:
             logger.error("Cannot generate certificate without Arabic font!")
             return
-
+        
         # Create PDF - FULL A4 size
         page_width, page_height = A4
-
+        
         c = canvas.Canvas(output_path, pagesize=A4)
-
+        
         t = self.TEXTS[alanguage]
 
         # HEADER - Top Right Corner (small text) - LIKE FIRST REFERENCE CODE

@@ -224,36 +224,25 @@ class GenerateInscriptionCertificateView(generics.RetrieveAPIView):
         
         generator = KairouanTarsimCertificateGenerator(font_path=font_file, bold_font_path=bold_font_file, alanguage=alanguage)
         
-        # Define the permanent path for the PDF in the requested folder
-        pdf_name = f"inscription_certificate_{instance.public_id}_{alanguage}.pdf"
-        pdf_path = os.path.join(settings.MEDIA_ROOT, 'document_requests', 'pdfs', 'requested', pdf_name)
-        os.makedirs(os.path.dirname(pdf_path), exist_ok=True) # Ensure directory exists
+        # Define a temporary path for the PDF
+        temp_pdf_name = f"inscription_certificate_{instance.public_id}_{alanguage}.pdf"
+        temp_pdf_path = os.path.join(settings.MEDIA_ROOT, 'temp_pdfs', temp_pdf_name)
+        os.makedirs(os.path.dirname(temp_pdf_path), exist_ok=True) # Ensure directory exists
 
         # Attempt to generate the certificate
-        pdf_generated = generator.generate_certificate(pdf_path, alanguage=alanguage, **certificate_data)
+        pdf_generated = generator.generate_certificate(temp_pdf_path, alanguage=alanguage, **certificate_data)
 
         if not pdf_generated: # If generate_certificate returned None due to font issues
             logger.error(f"Failed to generate PDF for request {instance.public_id} due to font errors. Check inscri.py logs for details.")
             return Response({"detail": "Failed to generate certificate due to server-side font configuration issues."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # Save the PDF to the document request's pdf_requested_file field
-        from django.core.files import File
         try:
-            with open(pdf_path, 'rb') as pdf_file:
-                instance.pdf_requested_file.save(pdf_name, File(pdf_file), save=True)
-            # Update status to READY
-            instance.status = DocumentRequest.Status.READY
-            instance.save(update_fields=['status'])
-            logger.info(f"Certificate saved and status updated for request {instance.public_id}")
-        except Exception as e:
-            logger.error(f"Failed to save PDF to model for request {instance.public_id}: {e}")
-            return Response({"detail": "Failed to save certificate to database."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-        try:
-            return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+            return FileResponse(open(temp_pdf_path, 'rb'), content_type='application/pdf')
         except FileNotFoundError:
-            logger.error(f"Generated PDF file not found on the server at {pdf_path} after generation attempt.")
+            logger.error(f"Generated PDF file not found on the server at {temp_pdf_path} after generation attempt.")
             raise Http404("Generated PDF file not found on the server.")
+        # Note: Temporary file cleanup is handled by periodic cleanup task or manual cleanup
+        # to avoid permission errors while the file is being served
 
 
 class GeneratePresenceCertificateView(generics.RetrieveAPIView):
@@ -323,36 +312,25 @@ class GeneratePresenceCertificateView(generics.RetrieveAPIView):
 
         generator = PresenceCertificateGenerator(font_path=font_file, bold_font_path=bold_font_file, alanguage=alanguage)
 
-        # Define the permanent path for the PDF in the requested folder
-        pdf_name = f"presence_certificate_{instance.public_id}_{alanguage}.pdf"
-        pdf_path = os.path.join(settings.MEDIA_ROOT, 'document_requests', 'pdfs', 'requested', pdf_name)
-        os.makedirs(os.path.dirname(pdf_path), exist_ok=True) # Ensure directory exists
+        # Define a temporary path for the PDF
+        temp_pdf_name = f"presence_certificate_{instance.public_id}_{alanguage}.pdf"
+        temp_pdf_path = os.path.join(settings.MEDIA_ROOT, 'temp_pdfs', temp_pdf_name)
+        os.makedirs(os.path.dirname(temp_pdf_path), exist_ok=True) # Ensure directory exists
 
         # Attempt to generate the certificate
-        pdf_generated = generator.generate_certificate(pdf_path, alanguage=alanguage, **certificate_data)
+        pdf_generated = generator.generate_certificate(temp_pdf_path, alanguage=alanguage, **certificate_data)
 
         if not pdf_generated: # If generate_certificate returned None due to font issues
             logger.error(f"Failed to generate PDF for request {instance.public_id} due to font errors. Check presence.py logs for details.")
             return Response({"detail": "Failed to generate certificate due to server-side font configuration issues."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # Save the PDF to the document request's pdf_requested_file field
-        from django.core.files import File
         try:
-            with open(pdf_path, 'rb') as pdf_file:
-                instance.pdf_requested_file.save(pdf_name, File(pdf_file), save=True)
-            # Update status to READY
-            instance.status = DocumentRequest.Status.READY
-            instance.save(update_fields=['status'])
-            logger.info(f"Certificate saved and status updated for request {instance.public_id}")
-        except Exception as e:
-            logger.error(f"Failed to save PDF to model for request {instance.public_id}: {e}")
-            return Response({"detail": "Failed to save certificate to database."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-        try:
-            return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+            return FileResponse(open(temp_pdf_path, 'rb'), content_type='application/pdf')
         except FileNotFoundError:
-            logger.error(f"Generated PDF file not found on the server at {pdf_path} after generation attempt.")
+            logger.error(f"Generated PDF file not found on the server at {temp_pdf_path} after generation attempt.")
             raise Http404("Generated PDF file not found on the server.")
+        # Note: Temporary file cleanup is handled by periodic cleanup task or manual cleanup
+        # to avoid permission errors while the file is being served
 
 
 class GenerateSuccessCertificateView(generics.RetrieveAPIView):
@@ -422,33 +400,22 @@ class GenerateSuccessCertificateView(generics.RetrieveAPIView):
 
         generator = SuccessCertificateGenerator(font_path=font_file, bold_font_path=bold_font_file, alanguage=alanguage)
 
-        # Define the permanent path for the PDF in the requested folder
-        pdf_name = f"success_certificate_{instance.public_id}_{alanguage}.pdf"
-        pdf_path = os.path.join(settings.MEDIA_ROOT, 'document_requests', 'pdfs', 'requested', pdf_name)
-        os.makedirs(os.path.dirname(pdf_path), exist_ok=True) # Ensure directory exists
+        # Define a temporary path for the PDF
+        temp_pdf_name = f"success_certificate_{instance.public_id}_{alanguage}.pdf"
+        temp_pdf_path = os.path.join(settings.MEDIA_ROOT, 'temp_pdfs', temp_pdf_name)
+        os.makedirs(os.path.dirname(temp_pdf_path), exist_ok=True) # Ensure directory exists
 
         # Attempt to generate the certificate
-        pdf_generated = generator.generate_certificate(pdf_path, alanguage=alanguage, **certificate_data)
+        pdf_generated = generator.generate_certificate(temp_pdf_path, alanguage=alanguage, **certificate_data)
 
         if not pdf_generated: # If generate_certificate returned None due to font issues
             logger.error(f"Failed to generate PDF for request {instance.public_id} due to font errors. Check sucess.py logs for details.")
             return Response({"detail": "Failed to generate certificate due to server-side font configuration issues."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-        # Save the PDF to the document request's pdf_requested_file field
-        from django.core.files import File
         try:
-            with open(pdf_path, 'rb') as pdf_file:
-                instance.pdf_requested_file.save(pdf_name, File(pdf_file), save=True)
-            # Update status to READY
-            instance.status = DocumentRequest.Status.READY
-            instance.save(update_fields=['status'])
-            logger.info(f"Certificate saved and status updated for request {instance.public_id}")
-        except Exception as e:
-            logger.error(f"Failed to save PDF to model for request {instance.public_id}: {e}")
-            return Response({"detail": "Failed to save certificate to database."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-        try:
-            return FileResponse(open(pdf_path, 'rb'), content_type='application/pdf')
+            return FileResponse(open(temp_pdf_path, 'rb'), content_type='application/pdf')
         except FileNotFoundError:
-            logger.error(f"Generated PDF file not found on the server at {pdf_path} after generation attempt.")
+            logger.error(f"Generated PDF file not found on the server at {temp_pdf_path} after generation attempt.")
             raise Http404("Generated PDF file not found on the server.")
+        # Note: Temporary file cleanup is handled by periodic cleanup task or manual cleanup
+        # to avoid permission errors while the file is being served
