@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     # Local
     "users",
     "reclamations",
+    "schedule",
 ]
 
 MIDDLEWARE = [
