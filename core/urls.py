@@ -7,6 +7,7 @@ urlpatterns = [
     path("api/users/", include("users.user_urls")),
     path("api/reclamations/", include("reclamations.urls")),
     path("api/documents/", include("document_requests.urls")),
+    path("api/classroom/", include("classroom.urls")),
 ]
 
 
