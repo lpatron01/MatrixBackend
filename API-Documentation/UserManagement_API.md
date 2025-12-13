@@ -1,4 +1,3 @@
-
 # User Management and Authentication API Documentation
 
 ## Authentication Endpoints
@@ -14,6 +13,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Register a new user account.
 
 **Request Body:**
+
 ```json
 {
   "email": "user@example.com",
@@ -28,6 +28,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 ```
 
 **Fields:**
+
 - `email` (required, string): User's email address (must be unique)
 - `password` (required, string): Password (minimum 8 characters)
 - `first_name` (optional, string): User's first name
@@ -38,6 +39,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 - `place_of_birth` (optional, string): User's place of birth
 
 **Response:** `201 Created`
+
 ```json
 {
   "id": 1,
@@ -64,6 +66,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Authenticate user and return JWT tokens.
 
 **Request Body:**
+
 ```json
 {
   "email": "user@example.com",
@@ -72,6 +75,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -104,6 +108,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Blacklist the refresh token to log out the user.
 
 **Request Body:**
+
 ```json
 {
   "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
@@ -121,6 +126,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Get the current authenticated user's profile information.
 
 **Response:** `200 OK`
+
 ```json
 {
   "id": 1,
@@ -152,6 +158,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Change the current user's password.
 
 **Request Body:**
+
 ```json
 {
   "old_password": "currentpassword123",
@@ -160,6 +167,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "detail": "Password updated successfully."
@@ -175,6 +183,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Send a password reset email to the user.
 
 **Request Body:**
+
 ```json
 {
   "email": "user@example.com"
@@ -182,6 +191,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "detail": "Password reset email sent."
@@ -197,6 +207,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 **Description:** Reset password using token from email.
 
 **Request Body:**
+
 ```json
 {
   "email": "user@example.com",
@@ -206,6 +217,7 @@ All authentication endpoints are prefixed with `/api/auth/`.
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "detail": "Password has been reset."
@@ -227,11 +239,13 @@ All user management endpoints are prefixed with `/api/users/` and require **Admi
 **Description:** Retrieve a list of all users with optional filtering and search.
 
 **Query Parameters:**
-- `role` (optional): Filter by role (`student`, `teacher`, `administrator`, `club_manager`)
+
+- `role` (optional): Filter by role (`student`, `teacher`, `administrator`, `club_manager, scolar_administrator`)
 - `is_active` (optional): Filter by active status (`true` or `false`)
 - `search` (optional): Search by email, first name, or last name
 
 **Examples:**
+
 ```bash
 # Get all users
 GET /api/users/
@@ -247,6 +261,7 @@ GET /api/users/?search=john
 ```
 
 **Response:** `200 OK`
+
 ```json
 [
   {
@@ -301,6 +316,7 @@ GET /api/users/?search=john
 **Description:** Create a new user account. Unlike the registration endpoint, this allows admins to set additional fields like `is_active` and `is_staff`.
 
 **Request Body:**
+
 ```json
 {
   "email": "newuser@example.com",
@@ -318,6 +334,7 @@ GET /api/users/?search=john
 ```
 
 **Fields:**
+
 - `email` (required, string): User's email address (must be unique)
 - `password` (optional, string): Password (minimum 8 characters). If not provided, a random password is generated
 - `first_name` (optional, string): User's first name
@@ -331,6 +348,7 @@ GET /api/users/?search=john
 - `is_staff` (optional, boolean): Whether the user can access admin panel (default: `false`)
 
 **Response:** `201 Created`
+
 ```json
 {
   "detail": "User created successfully.",
@@ -354,7 +372,9 @@ GET /api/users/?search=john
 ```
 
 **Error Responses:**
+
 - `400 Bad Request`: Invalid data or duplicate email
+
 ```json
 {
   "email": ["User with this email already exists."]
@@ -372,11 +392,13 @@ GET /api/users/?search=john
 **Description:** Retrieve detailed information about a specific user by their ID.
 
 **Example:**
+
 ```bash
 GET /api/users/1/
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "id": 1,
@@ -414,7 +436,9 @@ GET /api/users/1/
 ```
 
 **Error Responses:**
+
 - `404 Not Found`: User with specified ID does not exist
+
 ```json
 {
   "detail": "Not found."
@@ -432,6 +456,7 @@ GET /api/users/1/
 **Description:** Update user details. Use `PUT` for full updates or `PATCH` for partial updates.
 
 **Request Body (PUT - all fields required except password):**
+
 ```json
 {
   "first_name": "John",
@@ -443,6 +468,7 @@ GET /api/users/1/
 ```
 
 **Request Body (PATCH - only fields to update):**
+
 ```json
 {
   "role": "administrator",
@@ -452,6 +478,7 @@ GET /api/users/1/
 ```
 
 **Fields:**
+
 - `email` (read-only): Email cannot be changed
 - `password` (optional, string): New password (minimum 8 characters)
 - `first_name` (optional, string): User's first name
@@ -467,6 +494,7 @@ GET /api/users/1/
 - `is_staff` (optional, boolean): Admin panel access
 
 **Response:** `200 OK`
+
 ```json
 {
   "detail": "User updated successfully.",
@@ -493,6 +521,7 @@ GET /api/users/1/
 ```
 
 **Error Responses:**
+
 - `404 Not Found`: User does not exist
 - `400 Bad Request`: Invalid data
 
@@ -507,11 +536,13 @@ GET /api/users/1/
 **Description:** Permanently delete a user account.
 
 **Example:**
+
 ```bash
 DELETE /api/users/1/delete/
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "detail": "User 'user@example.com' deleted successfully."
@@ -519,7 +550,9 @@ DELETE /api/users/1/delete/
 ```
 
 **Error Responses:**
+
 - `404 Not Found`: User with specified ID does not exist
+
 ```json
 {
   "detail": "Not found."
@@ -543,11 +576,13 @@ All education history endpoints are prefixed with `/api/users/<user_pk>/educatio
 **Description:** Retrieve a list of all education history records for a specific user. The `<user_pk>` in the URL should be replaced with the ID of the user.
 
 **Example:**
+
 ```bash
 GET /api/users/1/education-history/
 ```
 
 **Response:** `200 OK`
+
 ```json
 [
   {
@@ -577,6 +612,7 @@ GET /api/users/1/education-history/
 **Description:** Create a new education history record for a specific user. Only students can have education history. The `<user_pk>` in the URL should be replaced with the ID of the student.
 
 **Request Body:**
+
 ```json
 {
   "academic_year": "2024-2025",
@@ -590,6 +626,7 @@ GET /api/users/1/education-history/
 ```
 
 **Fields:**
+
 - `academic_year` (required, string): Academic year (e.g., "2023-2024")
 - `registration_id` (required, integer): Registration ID
 - `grade` (required, string): Grade (choices: `1`, `2`, `3`)
@@ -599,6 +636,7 @@ GET /api/users/1/education-history/
 - `result` (required, string): Result (choices: `tres_bien`, `bien`, `assez_bien`, `passable`, `ajourne`)
 
 **Response:** `201 Created`
+
 ```json
 {
   "id": 2,
@@ -616,6 +654,7 @@ GET /api/users/1/education-history/
 ```
 
 **Error Responses:**
+
 - `400 Bad Request`: Invalid data or user is not a student.
 
 ---
@@ -629,11 +668,13 @@ GET /api/users/1/education-history/
 **Description:** Retrieve detailed information about a specific education history record for a user. The `<user_pk>` in the URL should be replaced with the ID of the user, and `<pk>` with the ID of the education history record.
 
 **Example:**
+
 ```bash
 GET /api/users/1/education-history/1/
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "id": 1,
@@ -651,6 +692,7 @@ GET /api/users/1/education-history/1/
 ```
 
 **Error Responses:**
+
 - `404 Not Found`: Education history record not found.
 
 ---
@@ -664,6 +706,7 @@ GET /api/users/1/education-history/1/
 **Description:** Update an education history record for a specific user. Use `PUT` for full updates or `PATCH` for partial updates. The `<user_pk>` in the URL should be replaced with the ID of the user, and `<pk>` with the ID of the education history record.
 
 **Request Body (PATCH - only fields to update):**
+
 ```json
 {
   "result": "assez_bien"
@@ -673,6 +716,7 @@ GET /api/users/1/education-history/1/
 **Fields:** (Same as create, all are optional for PATCH, all are required for PUT except `student`)
 
 **Response:** `200 OK`
+
 ```json
 {
   "id": 1,
@@ -690,6 +734,7 @@ GET /api/users/1/education-history/1/
 ```
 
 **Error Responses:**
+
 - `404 Not Found`: Education history record not found.
 - `400 Bad Request`: Invalid data.
 
@@ -704,11 +749,13 @@ GET /api/users/1/education-history/1/
 **Description:** Delete a specific education history record for a user. The `<user_pk>` in the URL should be replaced with the ID of the user, and `<pk>` with the ID of the education history record.
 
 **Example:**
+
 ```bash
 DELETE /api/users/1/education-history/1/delete/
 ```
 
 **Response:** `200 OK`
+
 ```json
 {
   "detail": "Education history record for 'user@example.com' for academic year '2023-2024' deleted successfully."
@@ -716,6 +763,7 @@ DELETE /api/users/1/education-history/1/delete/
 ```
 
 **Error Responses:**
+
 - `404 Not Found`: Education history record not found.
 
 ---
@@ -724,25 +772,22 @@ DELETE /api/users/1/education-history/1/delete/
 
 ### Fields
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | Integer | Unique identifier (auto-generated) |
-| `email` | String | User's email address (unique, used for login) |
-| `first_name` | String | User's first name (optional) |
-| `last_name` | String | User's last name (optional) |
-| `first_name_arabic` | String | User's first name in Arabic (optional) |
-| `last_name_arabic` | String | User's last name in Arabic (optional) |
-| `role` | String | User role: `student`, `teacher`, `administrator`, `club_manager` |
-| `role_display` | String | Human-readable role name (read-only) |
-| `cin` | Integer | User's CIN (unique) |
-| `diploma` | String | User's diploma |
-| `date_of_birth` | Date | User's date of birth |
-| `place_of_birth` | String | User's place of birth |
-| `place_of_birth_arabic` | String | User's place of birth in Arabic (optional) |
-| `education_histories` | Array | List of education history records (read-only) |
-| `is_active` | Boolean | Whether the user account is active |
-| `is_staff` | Boolean | Whether the user can access admin panel |
-| `date_joined` | DateTime | Account creation timestamp |
-
-
-
+| Field                     | Type     | Description                                                             |
+| ------------------------- | -------- | ----------------------------------------------------------------------- |
+| `id`                    | Integer  | Unique identifier (auto-generated)                                      |
+| `email`                 | String   | User's email address (unique, used for login)                           |
+| `first_name`            | String   | User's first name (optional)                                            |
+| `last_name`             | String   | User's last name (optional)                                             |
+| `first_name_arabic`     | String   | User's first name in Arabic (optional)                                  |
+| `last_name_arabic`      | String   | User's last name in Arabic (optional)                                   |
+| `role`                  | String   | User role:`student`, `teacher`, `administrator`, `club_manager` |
+| `role_display`          | String   | Human-readable role name (read-only)                                    |
+| `cin`                   | Integer  | User's CIN (unique)                                                     |
+| `diploma`               | String   | User's diploma                                                          |
+| `date_of_birth`         | Date     | User's date of birth                                                    |
+| `place_of_birth`        | String   | User's place of birth                                                   |
+| `place_of_birth_arabic` | String   | User's place of birth in Arabic (optional)                              |
+| `education_histories`   | Array    | List of education history records (read-only)                           |
+| `is_active`             | Boolean  | Whether the user account is active                                      |
+| `is_staff`              | Boolean  | Whether the user can access admin panel                                 |
+| `date_joined`           | DateTime | Account creation timestamp                                              |
