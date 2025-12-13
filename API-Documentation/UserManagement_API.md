@@ -772,22 +772,22 @@ DELETE /api/users/1/education-history/1/delete/
 
 ### Fields
 
-| Field                     | Type     | Description                                                             |
-| ------------------------- | -------- | ----------------------------------------------------------------------- |
-| `id`                    | Integer  | Unique identifier (auto-generated)                                      |
-| `email`                 | String   | User's email address (unique, used for login)                           |
-| `first_name`            | String   | User's first name (optional)                                            |
-| `last_name`             | String   | User's last name (optional)                                             |
-| `first_name_arabic`     | String   | User's first name in Arabic (optional)                                  |
-| `last_name_arabic`      | String   | User's last name in Arabic (optional)                                   |
-| `role`                  | String   | User role:`student`, `teacher`, `administrator`, `club_manager` |
-| `role_display`          | String   | Human-readable role name (read-only)                                    |
-| `cin`                   | Integer  | User's CIN (unique)                                                     |
-| `diploma`               | String   | User's diploma                                                          |
-| `date_of_birth`         | Date     | User's date of birth                                                    |
-| `place_of_birth`        | String   | User's place of birth                                                   |
-| `place_of_birth_arabic` | String   | User's place of birth in Arabic (optional)                              |
-| `education_histories`   | Array    | List of education history records (read-only)                           |
-| `is_active`             | Boolean  | Whether the user account is active                                      |
-| `is_staff`              | Boolean  | Whether the user can access admin panel                                 |
-| `date_joined`           | DateTime | Account creation timestamp                                              |
+| Field                     | Type     | Description                                                              |
+| ------------------------- | -------- | ------------------------------------------------------------------------ |
+| `id`                    | Integer  | Unique identifier (auto-generated)                                       |
+| `email`                 | String   | User's email address (unique, used for login)                            |
+| `first_name`            | String   | User's first name (optional)                                             |
+| `last_name`             | String   | User's last name (optional)                                              |
+| `first_name_arabic`     | String   | User's first name in Arabic (optional)                                   |
+| `last_name_arabic`      | String   | User's last name in Arabic (optional)                                    |
+| `role`                  | String   | User role:`student`, `teacher`, `administrator`, `club_manager ` |
+| `role_display`          | String   | Human-readable role name (read-only)                                     |
+| `cin`                   | Integer  | User's CIN (unique)                                                      |
+| `diploma`               | String   | User's diploma                                                           |
+| `date_of_birth`         | Date     | User's date of birth                                                     |
+| `place_of_birth`        | String   | User's place of birth                                                    |
+| `place_of_birth_arabic` | String   | User's place of birth in Arabic (optional)                               |
+| `education_histories`   | Array    | List of education history records (read-only)                            |
+| `is_active`             | Boolean  | Whether the user account is active                                       |
+| `is_staff`              | Boolean  | Whether the user can access admin panel                                  |
+| `date_joined`           | DateTime | Account creation timestamp                                               |
