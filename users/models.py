@@ -34,6 +34,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         STUDENT = "student", "Étudiant"
         TEACHER = "teacher", "Enseignant"
         ADMINISTRATOR = "administrator", "Responsable Administratif"
+        SCOLAR_ADMINISTRATOR = "scolar_administrator", "Responsable scolaire"
         CLUB_MANAGER = "club_manager", "Gestionnaire de Club"
 
     class DiplomaChoices(models.TextChoices):

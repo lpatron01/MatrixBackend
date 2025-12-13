@@ -1,11 +1,14 @@
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import DocumentRequest
+from .models import DocumentRequest, PresenceRequestApproval
 from .serializers import (
-    DocumentRequestSerializer, 
-    DocumentRequestCreateSerializer, 
+    DocumentRequestSerializer,
+    DocumentRequestCreateSerializer,
     DocumentRequestAdminUpdateSerializer,
-    DocumentRequestedFileSerializer
+    DocumentRequestedFileSerializer,
+    PresenceRequestCreateSerializer,
+    PresenceRequestApprovalSerializer,
+    PresenceRequestApprovalUpdateSerializer
 )
 from users.models import User, EducationHistory
 from .utlils.demande import generate_document_request_pdf
@@ -14,6 +17,9 @@ from .utlils.presence import KairouanTarsimCertificateGenerator as PresenceCerti
 from .utlils.sucess import ArabicCertificateGenerator as SuccessCertificateGenerator
 from django.http import FileResponse, Http404
 from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 import os,logging
 from rest_framework import status
 from rest_framework.response import Response
@@ -331,6 +337,140 @@ class GeneratePresenceCertificateView(generics.RetrieveAPIView):
             raise Http404("Generated PDF file not found on the server.")
         # Note: Temporary file cleanup is handled by periodic cleanup task or manual cleanup
         # to avoid permission errors while the file is being served
+
+
+class PresenceRequestCreateView(generics.CreateAPIView):
+    """View for students to create presence certificate requests with teacher selection"""
+    serializer_class = PresenceRequestCreateSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        document_request = serializer.save(student=self.request.user)
+
+        # Send email notifications to teachers
+        self._send_teacher_notifications(document_request)
+
+        # Generate PDF and save its path
+        pdf_path = generate_document_request_pdf(document_request)
+        document_request.pdf_file = pdf_path
+        document_request.save()
+
+    def _send_teacher_notifications(self, document_request):
+        """Send email notifications to teachers for approval"""
+        approvals = document_request.presence_approvals.all()
+
+        for approval in approvals:
+            teacher = approval.teacher
+            student = document_request.student
+
+            # Prepare email context
+            context = {
+                'teacher_name': teacher.first_name or teacher.email,
+                'student_name': f"{student.first_name} {student.last_name}",
+                'request_id': str(document_request.public_id),
+                'language': document_request.get_language_display(),
+                'reception_type': document_request.get_reception_type_display(),
+                'academic_year': document_request.academic_year,
+                'approval_url': f"{settings.FRONTEND_URL}/teacher/approvals/{approval.id}" if hasattr(settings, 'FRONTEND_URL') else f"/teacher/approvals/{approval.id}"
+            }
+
+            # Render email templates
+            subject = "Nouvelle demande d'attestation de présence à approuver"
+            html_message = render_to_string('emails/presence_request_notification.html', context)
+            plain_message = strip_tags(html_message)
+
+            try:
+                send_mail(
+                    subject=subject,
+                    message=plain_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    recipient_list=[teacher.email],
+                    html_message=html_message,
+                    fail_silently=False,
+                )
+                logger.info(f"Email sent to teacher {teacher.email} for presence request {document_request.public_id}")
+            except Exception as e:
+                logger.error(f"Failed to send email to teacher {teacher.email}: {str(e)}")
+
+
+class PresenceRequestApprovalListView(generics.ListAPIView):
+    """View for teachers to see their pending presence request approvals"""
+    serializer_class = PresenceRequestApprovalSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.role != User.Role.TEACHER:
+            return PresenceRequestApproval.objects.none()
+
+        return PresenceRequestApproval.objects.filter(
+            teacher=user,
+            status=PresenceRequestApproval.ApprovalStatus.PENDING
+        ).select_related('document_request', 'document_request__student')
+
+
+class PresenceRequestApprovalDetailView(generics.RetrieveUpdateAPIView):
+    """View for teachers to approve or reject presence requests"""
+    permission_classes = [permissions.IsAuthenticated]
+    lookup_field = 'id'
+
+    def get_queryset(self):
+        user = self.request.user
+        if user.role != User.Role.TEACHER:
+            return PresenceRequestApproval.objects.none()
+
+        return PresenceRequestApproval.objects.filter(
+            teacher=user
+        ).select_related('document_request', 'document_request__student')
+
+    def get_serializer_class(self):
+        if self.request.method in ['PUT', 'PATCH']:
+            return PresenceRequestApprovalUpdateSerializer
+        return PresenceRequestApprovalSerializer
+
+    def perform_update(self, serializer):
+        approval = serializer.save()
+
+        # Send notification email to student about the approval/rejection
+        self._send_student_notification(approval)
+
+    def _send_student_notification(self, approval):
+        """Send email notification to student about approval/rejection status"""
+        document_request = approval.document_request
+        student = document_request.student
+        teacher = approval.teacher
+
+        context = {
+            'student_name': student.first_name or student.email,
+            'teacher_name': f"{teacher.first_name} {teacher.last_name}",
+            'request_id': str(document_request.public_id),
+            'status': approval.get_status_display(),
+            'comment': approval.comment or '',
+            'request_url': f"{settings.FRONTEND_URL}/student/requests/{document_request.public_id}" if hasattr(settings, 'FRONTEND_URL') else f"/student/requests/{document_request.public_id}"
+        }
+
+        if approval.status == PresenceRequestApproval.ApprovalStatus.APPROVED:
+            subject = "Votre demande d'attestation de présence a été approuvée"
+            template = 'emails/presence_request_approved.html'
+        else:
+            subject = "Votre demande d'attestation de présence a été rejetée"
+            template = 'emails/presence_request_rejected.html'
+
+        try:
+            html_message = render_to_string(template, context)
+            plain_message = strip_tags(html_message)
+
+            send_mail(
+                subject=subject,
+                message=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[student.email],
+                html_message=html_message,
+                fail_silently=False,
+            )
+            logger.info(f"Email sent to student {student.email} about approval status change for request {document_request.public_id}")
+        except Exception as e:
+            logger.error(f"Failed to send email to student {student.email}: {str(e)}")
 
 
 class GenerateSuccessCertificateView(generics.RetrieveAPIView):

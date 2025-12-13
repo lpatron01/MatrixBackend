@@ -23,17 +23,6 @@ class SubjectAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at', 'updated_at')
 
 
-@admin.register(Timetable)
-class TimetableAdmin(admin.ModelAdmin):
-    list_display = ('class_room', 'subject', 'teacher', 'day_of_week', 'time_slot', 'classroom', 'is_active')
-    list_filter = ('day_of_week', 'time_slot', 'academic_year', 'is_active', 'class_room', 'subject')
-    search_fields = ('class_room__name', 'subject__name', 'teacher__email', 'classroom')
-    readonly_fields = ('created_at', 'updated_at')
-
-    def get_queryset(self, request):
-        return super().get_queryset(request).select_related('class_room', 'subject', 'teacher')
-
-
 class AttendanceInline(admin.TabularInline):
     model = Attendance
     extra = 0

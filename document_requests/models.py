@@ -65,6 +65,60 @@ class DocumentRequest(models.Model):
     def __str__(self):
         return f"{self.document_type} - {self.student} ({self.status})"
 
+    def is_ready_for_processing(self):
+        """Check if presence request is ready for administrative processing (both teachers approved)"""
+        if self.document_type != self.DocumentType.CERTIFICATE_PRESENCE:
+            return False
+
+        approvals = self.presence_approvals.all()
+        if approvals.count() != 2:
+            return False
+
+        return all(approval.status == PresenceRequestApproval.ApprovalStatus.APPROVED for approval in approvals)
+
+    def has_rejection(self):
+        """Check if presence request has been rejected by any teacher"""
+        if self.document_type != self.DocumentType.CERTIFICATE_PRESENCE:
+            return False
+
+        return self.presence_approvals.filter(status=PresenceRequestApproval.ApprovalStatus.REJECTED).exists()
+
+class PresenceRequestApproval(models.Model):
+    class ApprovalStatus(models.TextChoices):
+        PENDING = 'PENDING', _('En attente')
+        APPROVED = 'APPROVED', _('Approuvé')
+        REJECTED = 'REJECTED', _('Rejeté')
+
+    document_request = models.ForeignKey(
+        DocumentRequest,
+        on_delete=models.CASCADE,
+        related_name='presence_approvals',
+        limit_choices_to={'document_type': DocumentRequest.DocumentType.CERTIFICATE_PRESENCE}
+    )
+    teacher = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='presence_request_approvals',
+        limit_choices_to={'role': 'teacher'}
+    )
+    status = models.CharField(
+        max_length=20,
+        choices=ApprovalStatus.choices,
+        default=ApprovalStatus.PENDING
+    )
+    comment = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        unique_together = ['document_request', 'teacher']
+        verbose_name = "Presence Request Approval"
+        verbose_name_plural = "Presence Request Approvals"
+
+    def __str__(self):
+        return f"{self.document_request} - {self.teacher} ({self.status})"
+
+
 class DocumentRequestHistory(models.Model):
     document_request = models.ForeignKey(
         DocumentRequest,

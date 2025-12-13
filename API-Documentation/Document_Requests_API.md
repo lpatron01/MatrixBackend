@@ -34,6 +34,11 @@ Toutes les routes nécessitent un jeton d'authentification (Bearer Token).
 - `PERSONAL`: En personne
 - `BOTH`: Les deux
 
+### Statuts d'approbation (pour les demandes d'attestation de présence)
+- `PENDING`: En attente d'approbation
+- `APPROVED`: Approuvé par l'enseignant
+- `REJECTED`: Rejeté par l'enseignant
+
 ## Historique des changements
 
 Toutes les modifications de statut sont automatiquement tracées dans le champ `history`. Chaque entrée contient :
@@ -267,3 +272,152 @@ Permet de générer et télécharger un certificat de réussite au format PDF po
 
 **Réponse (200 OK) :** Le fichier PDF du certificat de réussite est retourné directement (content-type: `application/pdf`).
 En cas d'absence de fichier PDF, de type de document incorrect, de permissions insuffisantes, ou de données manquantes, un statut 404 ou 403 sera retourné.
+
+### 12. Créer une demande d'attestation de présence avec sélection d'enseignants (Étudiant)
+**POST** `/api/documents/presence-requests/`
+
+Permet à un étudiant de soumettre une nouvelle demande d'attestation de présence en sélectionnant exactement 2 enseignants pour approbation.
+
+**Corps de la requête (JSON) :**
+```json
+{
+    "language": "<language>",
+    "reception_type": "<reception_type>",
+    "academic_year": "<academic_year>",
+    "teachers": ["<teacher_uuid_1>", "<teacher_uuid_2>"]
+}
+```
+  - `language`: Langue souhaitée du document (ex: "ar" pour Arabe, "fr" pour Français).
+  - `reception_type`: Mode de réception du document (ex: "ONLINE", "PERSONAL", "BOTH").
+  - `academic_year`: Année académique au format "YYYY-YYYY" (ex: "2023-2024").
+  - `teachers`: Tableau contenant exactement 2 UUIDs d'enseignants actifs pour approuver la demande.
+
+**Permissions :**
+  - **Étudiant** : Uniquement les étudiants authentifiés peuvent créer des demandes d'attestation de présence.
+
+**Réponse (201 Created) :**
+```json
+{
+    "id": "<uuid>",
+    "student": {
+        "id": <user_id>,
+        "username": "<username>",
+        "email": "<email>",
+        "first_name": "<first_name>",
+        "last_name": "<last_name>",
+        "first_name_arabic": "<first_name_arabic>",
+        "last_name_arabic": "<last_name_arabic>"
+    },
+    "document_type": "CERTIFICATE_PRESENCE",
+    "status": "NEW",
+    "language": "<language>",
+    "reception_type": "<reception_type>",
+    "academic_year": "<academic_year>",
+    "created_at": "<datetime>",
+    "updated_at": "<datetime>",
+    "pdf_file": "<path_to_generated_pdf>"
+}
+```
+
+**Notes :**
+- Le type de document est automatiquement défini comme `CERTIFICATE_PRESENCE`.
+- Un fichier PDF de demande est automatiquement généré.
+- Des notifications par email sont automatiquement envoyées aux 2 enseignants sélectionnés.
+- Chaque enseignant doit approuver la demande pour qu'elle passe en traitement administratif.
+- Si un enseignant rejette la demande, elle est automatiquement rejetée.
+
+### 13. Lister les demandes d'approbation en attente (Enseignant uniquement)
+**GET** `/api/documents/teacher/approvals/`
+
+Permet aux enseignants de voir la liste de leurs demandes d'attestation de présence en attente d'approbation.
+
+**Permissions :**
+  - **Enseignant** : Uniquement les enseignants authentifiés peuvent voir leurs propres demandes d'approbation.
+
+**Réponse (200 OK) :** Une liste d'objets d'approbation avec la structure suivante :
+```json
+[
+    {
+        "id": <approval_id>,
+        "document_request": {
+            "id": "<request_uuid>",
+            "student": {
+                "id": <student_id>,
+                "first_name": "<first_name>",
+                "last_name": "<last_name>",
+                "email": "<student_email>"
+            },
+            "language": "<language>",
+            "reception_type": "<reception_type>",
+            "academic_year": "<academic_year>",
+            "created_at": "<datetime>"
+        },
+        "teacher": {
+            "id": <teacher_id>,
+            "first_name": "<first_name>",
+            "last_name": "<last_name>",
+            "email": "<teacher_email>"
+        },
+        "status": "PENDING",
+        "created_at": "<datetime>",
+        "updated_at": "<datetime>"
+    }
+]
+```
+
+### 14. Approuver ou rejeter une demande d'attestation de présence (Enseignant uniquement)
+**GET**, **PUT**, **PATCH** `/api/documents/teacher/approvals/{id}/`
+
+Permet aux enseignants de consulter, approuver ou rejeter une demande d'attestation de présence qui leur a été assignée.
+
+**Paramètres d'URL :**
+  - `{id}`: L'ID numérique de l'approbation.
+
+**Permissions :**
+  - **Enseignant** : Uniquement l'enseignant assigné à cette approbation peut la consulter ou la modifier.
+
+**Description :**
+    - `GET`: Récupère les détails de l'approbation.
+    - `PUT`/`PATCH`: Met à jour le statut de l'approbation (APPROVED ou REJECTED).
+
+**Corps de la requête pour PUT/PATCH :**
+```json
+{
+    "status": "<approval_status>",
+    "comment": "<optional_comment>"
+}
+```
+  - `status`: Statut de l'approbation ("APPROVED" ou "REJECTED").
+  - `comment`: Commentaire facultatif expliquant la décision.
+
+**Réponse (200 OK) :**
+```json
+{
+    "id": <approval_id>,
+    "document_request": {
+        "id": "<request_uuid>",
+        "student": {...},
+        "status": "<request_status>",
+        "language": "<language>",
+        "reception_type": "<reception_type>",
+        "academic_year": "<academic_year>"
+    },
+    "teacher": {
+        "id": <teacher_id>,
+        "first_name": "<first_name>",
+        "last_name": "<last_name>",
+        "email": "<teacher_email>"
+    },
+    "status": "<approval_status>",
+    "comment": "<comment>",
+    "created_at": "<datetime>",
+    "updated_at": "<datetime>"
+}
+```
+
+**Notes :**
+- **Logique métier automatique :**
+  - Si un enseignant **rejette** la demande → Le statut de la demande passe automatiquement à "REJECTED".
+  - Si les **deux enseignants approuvent** → Le statut de la demande passe automatiquement à "IN_PROGRESS" pour traitement administratif.
+- Des notifications par email sont automatiquement envoyées à l'étudiant après chaque approbation/rejet.
+- L'historique des changements de statut est automatiquement tracé.

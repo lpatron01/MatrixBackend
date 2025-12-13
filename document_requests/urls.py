@@ -10,6 +10,9 @@ from .views import (
     GenerateInscriptionCertificateView,
     GeneratePresenceCertificateView,
     GenerateSuccessCertificateView,
+    PresenceRequestCreateView,
+    PresenceRequestApprovalListView,
+    PresenceRequestApprovalDetailView,
 )
 
 app_name = 'document_requests'
@@ -64,5 +67,21 @@ urlpatterns = [
         "demandes/<uuid:public_id>/generate-success-certificate/",
         GenerateSuccessCertificateView.as_view(),
         name="generate-success-certificate",
+    ),
+    # Presence request specific endpoints
+    path(
+        "presence-requests/",
+        PresenceRequestCreateView.as_view(),
+        name="presence-request-create",
+    ),
+    path(
+        "teacher/approvals/",
+        PresenceRequestApprovalListView.as_view(),
+        name="presence-request-approval-list",
+    ),
+    path(
+        "teacher/approvals/<int:id>/",
+        PresenceRequestApprovalDetailView.as_view(),
+        name="presence-request-approval-detail",
     ),
 ]
