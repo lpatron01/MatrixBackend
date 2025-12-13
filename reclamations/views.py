@@ -20,9 +20,13 @@ class ReclamationListCreateView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        # Admins see all, others see their own
+        # Admins see all
         if user.is_staff or user.role == User.Role.ADMINISTRATOR:
             return Reclamation.objects.all()
+        # Teachers see only ENSEIGNEMENT category
+        elif user.role == User.Role.TEACHER:
+            return Reclamation.objects.filter(category=Reclamation.Category.ENSEIGNEMENT)
+        # Students see their own
         return Reclamation.objects.filter(student=user)
 
     def get_serializer_class(self):
@@ -31,11 +35,9 @@ class ReclamationListCreateView(generics.ListCreateAPIView):
         return ReclamationSerializer
 
     def perform_create(self, serializer):
-        is_anonymous = serializer.validated_data.get('is_anonymous', False)
-        if is_anonymous:
-            serializer.save(student=None)
-        else:
-            serializer.save(student=self.request.user)
+        # Always associate the student so they can track their reclamation
+        # Anonymity is handled in the serializer representation
+        serializer.save(student=self.request.user)
 
 class ReclamationDetailView(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
@@ -45,6 +47,8 @@ class ReclamationDetailView(generics.RetrieveUpdateDestroyAPIView):
         user = self.request.user
         if user.is_staff or user.role == User.Role.ADMINISTRATOR:
             return Reclamation.objects.all()
+        elif user.role == User.Role.TEACHER:
+            return Reclamation.objects.filter(category=Reclamation.Category.ENSEIGNEMENT)
         return Reclamation.objects.filter(student=user)
 
     def get_serializer_class(self):
@@ -56,8 +60,12 @@ class ReclamationDetailView(generics.RetrieveUpdateDestroyAPIView):
     def perform_update(self, serializer):
         # Check permission for update
         user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+    def perform_update(self, serializer):
+        # Check permission for update
+        user = self.request.user
+        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR or user.role == User.Role.TEACHER):
              raise permissions.PermissionDenied("You do not have permission to update this reclamation.")
+        serializer.save()
         serializer.save()
 
     def perform_destroy(self, instance):
