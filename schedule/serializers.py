@@ -35,7 +35,7 @@ class SessionSerializer(serializers.ModelSerializer):
     )
     teacher = UserSerializer(read_only=True)
     teacher_id = serializers.PrimaryKeyRelatedField(
-        queryset=User.objects.filter(role='teacher'),
+        queryset=User.objects.filter(role__in=['teacher', 'administrator', 'admin']),
         source='teacher',
         write_only=True,
         required=False,

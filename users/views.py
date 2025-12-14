@@ -295,16 +295,36 @@ class UserDetailView(generics.RetrieveAPIView):
 class UserUpdateView(generics.UpdateAPIView):
     """
     PUT/PATCH /api/users/<id>/update/
-    Update user details (Admin only)
+    Update user details (Admin or self-update)
     """
     queryset = User.objects.all()
     serializer_class = UserUpdateSerializer
-    permission_classes = [permissions.IsAdminUser]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def check_permissions(self, request):
+        super().check_permissions(request)
+        # Allow admin or user updating their own profile
+        user_id = self.kwargs.get('pk')
+        if not (request.user.is_staff or 
+                request.user.role in ['administrator', 'admin', 'scolar_administrator'] or
+                str(request.user.id) == str(user_id)):
+            self.permission_denied(request, message="You can only update your own profile.")
 
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        
+        # Non-admin users cannot change certain fields
+        if not (request.user.is_staff or request.user.role in ['administrator', 'admin', 'scolar_administrator']):
+            # Remove admin-only fields from request data
+            mutable_data = request.data.copy() if hasattr(request.data, 'copy') else dict(request.data)
+            admin_only_fields = ['role', 'is_active', 'is_staff', 'email']
+            for field in admin_only_fields:
+                mutable_data.pop(field, None)
+            serializer = self.get_serializer(instance, data=mutable_data, partial=partial)
+        else:
+            serializer = self.get_serializer(instance, data=request.data, partial=partial)
+            
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         return Response(

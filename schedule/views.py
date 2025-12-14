@@ -15,13 +15,13 @@ from .serializers import (
 class IsAdminUser(permissions.BasePermission):
     """Custom permission for admin users"""
     def has_permission(self, request, view):
-        return request.user and request.user.role == 'administrator'
+        return request.user and request.user.role in ['administrator', 'admin']
 
 
 class IsTeacherOrAdmin(permissions.BasePermission):
     """Permission for teachers or admins"""
     def has_permission(self, request, view):
-        return request.user and request.user.role in ['teacher', 'administrator']
+        return request.user and request.user.role in ['teacher', 'administrator', 'admin']
 
 
 # =============================================================================
