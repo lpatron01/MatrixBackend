@@ -11,6 +11,9 @@ urlpatterns = [
     path("api/schedule/", include("schedule.urls")),
     path("api/chatbot/", include("chatbot.urls")),
     path("api/clubs/", include("clubs.urls")),
+    path("api/clubs/", include("clubs.urls")),
+    path("api/chatbot/", include("chatbot.urls")),
+
 ]
 
 
