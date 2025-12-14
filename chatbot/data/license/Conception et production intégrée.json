@@ -1,0 +1,1116 @@
+{
+  "Diplome": "Licence en Génie Mécanique",
+  "Parcours": "Conception et production intégrée",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Module": "Electricité 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573899131",
+              "Matiere": "Electronique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899133",
+              "Matiere": "Atelier : Electricité 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899132",
+              "Matiere": "Electrotechnique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Matériaux et Procédés 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573899123",
+              "Matiere": "Atelier",
+              "Coef": 0.5,
+              "Cr": 1,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899121",
+              "Matiere": "Procédés 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899122",
+              "Matiere": "Sciences des matériaux 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Conception et Modélisation 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573899112",
+              "Matiere": "Conception 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899113",
+              "Matiere": "Atelier : Mécanique DAO",
+              "Coef": 0.5,
+              "Cr": 1,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 42,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899111",
+              "Matiere": "Mécanique 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573899141",
+              "Matiere": "Analyse 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899142",
+              "Matiere": "Algébre 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et compétences 1",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573896112",
+              "Matiere": "Techniques avancées de communication 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573896111",
+              "Matiere": "English for scientific purposes 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Module": "Mathématiques 2",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573899241",
+              "Matiere": "Analyse 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899242",
+              "Matiere": "Statistiques",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electricité 2/ Informatique",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573899232",
+              "Matiere": "Algorithmique et programmation",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899231",
+              "Matiere": "Circuits et shémas électriques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573899233",
+              "Matiere": "Atelier : Electricité 2 / informatique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Matériaux et Procédés 2",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573899224",
+              "Matiere": "Procédés 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899225",
+              "Matiere": "Sciences des matériaux 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899226",
+              "Matiere": "Atelier",
+              "Coef": 0.5,
+              "Cr": 1,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Conception et Modélisation 2",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573899222",
+              "Matiere": "Conception 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899223",
+              "Matiere": "Atelier : Mécanique 2/ CAO)",
+              "Coef": 0.5,
+              "Cr": 1,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 42,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573899221",
+              "Matiere": "Mécanique 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et compétences 2",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573896114",
+              "Matiere": "Techniques avancées de communication 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573896113",
+              "Matiere": "English for scientific purposes 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Module": "Automatique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810332",
+              "Matiere": "Régulation et Asservissement",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810331",
+              "Matiere": "Automatismes Industriels",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810333",
+              "Matiere": "Atelier :Automatique/ Asservissement",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mécanique des Fluides et Thermique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810323",
+              "Matiere": "Atelier:Mécanique des Fluides/Thermique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810321",
+              "Matiere": "Mécanique des Fluides",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573810322",
+              "Matiere": "Thermique Industrielle",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Conception et Modélisation 3",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810312",
+              "Matiere": "Conception 3",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573810311",
+              "Matiere": "Mécanique Vibratoire et Calcul",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573810313",
+              "Matiere": "Atelier:CAO3/Mécanique 3",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et Compétences 3",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573810341",
+              "Matiere": "Technique de Communication 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810342",
+              "Matiere": "Culture de l'Entrprise",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UE:Mini Projet",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "169916858",
+              "Matiere": "Initiation aux Mini Projets",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "169916859",
+              "Matiere": "Mini Projet Personnalisé",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "cc",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 21,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 4,
+      "UE": [
+        {
+          "Module": "Conception et Fabrication Assistée par Ordinateur",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810413",
+              "Matiere": "Atelier : CAO-FAO",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 42,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573810412",
+              "Matiere": "FAO",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810411",
+              "Matiere": "CAO",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Production des Métaux",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810432",
+              "Matiere": "Corrosion et Protection des Métaux",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810433",
+              "Matiere": "Atelier: Métaux",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810431",
+              "Matiere": "Tribologie et Lubrification",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Conception et Production Intégrée",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810422",
+              "Matiere": "Ingénierie Système",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810421",
+              "Matiere": "Analyse Fonctionnelle",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810423",
+              "Matiere": "Atelier: Conception et Production Intégrée",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et Compétences4",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573810442",
+              "Matiere": "Management d'Equipe et Leadership",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810441",
+              "Matiere": "Technique de Communication 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UE:Systèmes de vision",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "169916861",
+              "Matiere": "Apprentissage et outils d'aide à la décision",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169916860",
+              "Matiere": "Vision Industrielle",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 5,
+      "UE": [
+        {
+          "Module": "CND et qualité",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810513",
+              "Matiere": "Controle non destructif",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810514",
+              "Matiere": "Controle qualité",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810515",
+              "Matiere": "Atelier CND et qualité",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 42,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mécanique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573810563",
+              "Matiere": "Atelier mécanique expérimentale",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810511",
+              "Matiere": "Plan d'expérience",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810512",
+              "Matiere": "Recherche opérationnelle et optimisation",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Logistique",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "573810517",
+              "Matiere": "Gestion d'une chaine logistique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573810518",
+              "Matiere": "Modélisation et controle des systèmes de production",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et compétences",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573810519",
+              "Matiere": "Projet linguistique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573810520",
+              "Matiere": "Droit social et droit du travail",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Eco-conception",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "169923804",
+              "Matiere": "Eco-conception et fabrication des systèmes Mécaniques",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169923805",
+              "Matiere": "optimisation de la conception",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169923806",
+              "Matiere": "atelier:eco-conception",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

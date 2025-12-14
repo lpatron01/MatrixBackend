@@ -1,0 +1,906 @@
+{
+  "Diplome": "Licence en électronique électrotechnique & Automatique",
+  "Parcours": "Systèmes Electriques",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Module": "Electronique 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "57359870",
+              "Matiere": "Circuits électriques",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "57359860",
+              "Matiere": "Electronique numérique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Informatique 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573683117",
+              "Matiere": "algorithmique et programmation",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573683116",
+              "Matiere": "systèmes d'exploitation",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electricité générale",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573683113",
+              "Matiere": "électrostatique et magnétostatique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "573683114",
+              "Matiere": "mécanique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573683112",
+              "Matiere": "algèbre 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573683111",
+              "Matiere": "analyse 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "langues et compétences",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573682151",
+              "Matiere": "Anglais 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573682152",
+              "Matiere": "C2I 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Module": "Electromagnétisme",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573683232",
+              "Matiere": "électromagnétisme",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "573683233",
+              "Matiere": "thermodynamique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 2",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573683221",
+              "Matiere": "analyse 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573683222",
+              "Matiere": "algèbre 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Informatique 2",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573683234",
+              "Matiere": "programmation avancée",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573683235",
+              "Matiere": "bases de données",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electronique 2",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "57359881",
+              "Matiere": "Fonctions d'électronique numérique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "57359880",
+              "Matiere": "Electronique analogique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "langues et compétences",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573682252",
+              "Matiere": "C2I 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573682251",
+              "Matiere": "Anglais 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Module": "Automatique 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626312",
+              "Matiere": "Instrumentation et métrologie",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573626311",
+              "Matiere": "Automatique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Traitement de signal 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626313",
+              "Matiere": "Traitement du signal analogique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "573626314",
+              "Matiere": "Transmission des données",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electronique pour L'embarqué",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626316",
+              "Matiere": "Architecture des microprocesseurs et microcontrôleurs",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573626315",
+              "Matiere": "Fonctions d'électronique analogique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et compétences",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626318",
+              "Matiere": "culture d'entreprise",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 14
+              }
+            },
+            {
+              "Code_EE": "573626317",
+              "Matiere": "Technique de communication 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 14
+              }
+            }
+          ]
+        },
+        {
+          "Module": "ueo",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169916854",
+              "Matiere": "Electrotechnique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "mx",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 7,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 38.5
+              }
+            },
+            {
+              "Code_EE": "169916855",
+              "Matiere": "Electronique de Puissance",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "mx",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 7,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 38.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 4,
+      "UE": [
+        {
+          "Module": "Electricité Industrielle",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626415",
+              "Matiere": "Electricité industrielle",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573626416",
+              "Matiere": "Schéma électrique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electrotechnique",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626411",
+              "Matiere": "Machines Electriques",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "573626412",
+              "Matiere": "Association convertisseur machine",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Réseaux électriques 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626413",
+              "Matiere": "Production Transport d'Energie",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573626414",
+              "Matiere": "Réseaux électriques 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et compétences",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626418",
+              "Matiere": "Management d'Equipe et Leadership",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573626417",
+              "Matiere": "Technique de communication 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "ueo",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169916856",
+              "Matiere": "circuits logique Programmables (FPGA) et DSP",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "mx",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 7,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 38.5
+              }
+            },
+            {
+              "Code_EE": "169916857",
+              "Matiere": "électroniques embarqués",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "mx",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 5,
+      "UE": [
+        {
+          "Module": "Electronique de puissance 2",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626511",
+              "Matiere": "Commande des machines",
+              "Coef": 3,
+              "Cr": 6,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573626512",
+              "Matiere": "Variateur de vitesse",
+              "Coef": 3,
+              "Cr": 6,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Régulation et Instrumentation industrielle",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626521",
+              "Matiere": "Capteur et chaine de mesure",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573626522",
+              "Matiere": "Régulation industrielle",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langue et compétences",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626541",
+              "Matiere": "Anglais 3",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573626542",
+              "Matiere": "Droit social et droit du travail",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Traitement de signale",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573626531",
+              "Matiere": "Economie d'énergie et énergies renouvelables",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573626532",
+              "Matiere": "Réseaux électriques 2",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "ueo",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169923810",
+              "Matiere": "Transmission Analogique et numérique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "mx",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "169923809",
+              "Matiere": "Filtrage numérique",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "mx",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

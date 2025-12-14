@@ -1,0 +1,963 @@
+{
+  "Niveau": "Mastère Professionnel",
+  "Mention": "Génie Mécanique",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Code_UE": "UE1.1",
+          "Module_UE": "Fondamentale : (Mécanique appliquée)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Technologie de production mécanique",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Technologie de conception mécanique",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier mécanique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE1.2",
+          "Module_UE": "Fondamentale : (informatique appliqué)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Informatique industrielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Technologie et Réseaux",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier informatique appliqué",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 31.5,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 73.5
+          },
+          "Crédits_UE": 5,
+          "Coefficient_UE": 5,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE1.3",
+          "Module_UE": "Fondamentale : (Technologie Mécanique)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "RDM & Mécanique des milieux déformable",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Mécanique des fluides",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier technologie mécanique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE1.4",
+          "Module_UE": "Transversale :",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Anglais scientifique 1",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Gestion d’innovation et qualité",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Création entreprise et partenariat",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 31.5,
+            "TD": 31.5,
+            "TP": 0,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 4,
+          "Coefficient_UE": 4,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE1.5",
+          "Module_UE": "Optionnelle :",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Ondes et propagation",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Notion de Mécanique vibratoire",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier mécanisme & vibrations",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 189,
+        "TD": 115.5,
+        "TP": 84,
+        "Autres": 0,
+        "Total": 388.5
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Code_UE": "UE.2.1",
+          "Module_UE": "Fondamentale : (Réseaux industriels)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Réseaux locaux industriels",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Système temps réel",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier réseaux",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 5,
+          "Coefficient_UE": 5,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.2.2",
+          "Module_UE": "Fondamentale : (Transfert et chaleur)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Transfert thermique",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Combustion",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier transfert thermique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.2.3",
+          "Module_UE": "Fondamentale : (Systèmes Automatisés de Production)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Elément de productiques et optimisation",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Systèmes organisationnels",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier SAP",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.2.4",
+          "Module_UE": "Transversale : (Mécanisme et structure)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Analyse des mécanismes",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Métaux et structure",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Technologie des Matériaux",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.2.5",
+          "Module_UE": "Optionnelle : (CFAO)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "CAO",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "FAO",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier CFAO",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 189,
+        "TD": 105,
+        "TP": 105,
+        "Autres": 0,
+        "Total": 399
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Code_UE": "UE.3.1",
+          "Module_UE": "Fondamentale : (Audits Energétiques)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Source, stockage et Transport de l’énergie",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Audits Energétiques",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Audits",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.3.2",
+          "Module_UE": "Fondamentale : (Automatique)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Automatique linéaire et non linéaire",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Commande multivariable linéaire et non linéaire",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Automatique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 5,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 5,
+          "Coefficient_UE": 5,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.3.3",
+          "Module_UE": "Fondamentale : (Systèmes hydrauliques et Pneumatiques)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Hydraulique industrielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 42
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Pneumatique industrielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 42
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Systèmes hydraulique et pneumatique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 42,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 105
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.3.4",
+          "Module_UE": "Transversales : (Projet Personnel)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Projet Pratique de synthèse",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Projet Séminaire de Recherche Appliquée",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Anglais & Communication",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 21,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 31.5,
+            "TD": 42,
+            "TP": 0,
+            "Autres": 0,
+            "Total": 73.5
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE.3.5",
+          "Module_UE": "Optionnelle : (Energie Renouvelable)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Génie climatique",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Energie solaire et énergie éolienne",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier énergie renouvelable",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 178.5,
+        "TD": 115.5,
+        "TP": 105,
+        "Autres": 0,
+        "Total": 399
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    }
+  ]
+}

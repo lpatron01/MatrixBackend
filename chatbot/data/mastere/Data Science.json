@@ -1,0 +1,693 @@
+{
+  "Programme": "Master de recherche Science des données",
+  "Parcours": "Data Science",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "Type": "Tronc commun",
+      "UE": [
+        {
+          "Code_UE": "UE1",
+          "Module_UE": "Conception Algorithmique Programmation et IA",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Algorithmique et complexité",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 15,
+            "Total": 57
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE2",
+          "Module_UE": "Ingénierie et sciences des services",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Architectures et systèmes évolués",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Réseaux IP",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 25,
+            "Total": 109
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE3",
+          "Module_UE": "Modélisation",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Modélisation Probabiliste",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Graphes et Applications",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 20,
+            "Total": 104
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE4",
+          "Module_UE": "Langue & Raisonnement de recherche",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Anglais (préparation au TOEFL)",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10,
+                "TP": 0,
+                "Total": 31
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Français (préparation à la certification)",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10,
+                "TP": 0,
+                "Total": 31
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 20,
+            "TP": 0,
+            "Total": 62
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE5",
+          "Module_UE": "UE Optionnelle",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Probabilités et statistiques",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Modélisation et Simulation Stochastique",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 20,
+            "Total": 104
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        }
+      ],
+      "Total_Horaire_Présentiel": {
+        "Cours": 378,
+        "TD": 224,
+        "TP": 154,
+        "Total": 756
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 2,
+      "Type": "Tronc commun",
+      "UE": [
+        {
+          "Code_UE": "UE6",
+          "Module_UE": "Génie des connaissances",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Intelligence artificielle",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Machine learning et Applications aux Données Multimédias",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 30,
+            "Total": 114
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE7",
+          "Module_UE": "Théorie de la programmation",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Calculabilité et Décidabilité",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Paradigmes des langages de programmation",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 25,
+            "Total": 109
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE8",
+          "Module_UE": "Génie Logiciel",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Ingénierie des méthodes et des processus",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Méthodes formelles",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 20,
+            "Total": 104
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE9",
+          "Module_UE": "Langue & Pédagogie innovante",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Anglais (préparation au TOEFL)",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Initiation à la recherche et à la vie du chercheur",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10,
+                "TP": 0,
+                "Total": 31
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 10,
+            "TP": 0,
+            "Total": 52
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE10",
+          "Module_UE": "U.E. Optionnelle (2 modules au choix)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Statistique non paramétrique",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Apprentissage Statistique",
+              "Volume_Horaire": {
+                "Cours": 28,
+                "TD": 14,
+                "TP": 10,
+                "Total": 52
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 56,
+            "TD": 28,
+            "TP": 20,
+            "Total": 104
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        }
+      ],
+      "Total_Horaire_Présentiel": {
+        "Cours": 378,
+        "TD": 224,
+        "TP": 154,
+        "Total": 756
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 3,
+      "Type": "Parcours Data Science",
+      "UE": [
+        {
+          "Code_UE": "UE11",
+          "Module_UE": "Fouille de données et IA",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Machine Learning",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10,
+                "TP": 0,
+                "Total": 31
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 3.5,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Fouille de Données",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 15,
+                "Total": 46.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3.5,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Projet fédérateur Fouille de Données et Machine Learning",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 21,
+                "TP": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 3.5,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 52.5,
+            "TD": 41.5,
+            "TP": 15,
+            "Total": 109
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 3.5,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE12",
+          "Module_UE": "Modélisation statistique",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Statistique inférentielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 4,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 3.5,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Modèles de régression",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 15,
+                "Total": 46.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3.5,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 31.5,
+            "TP": 30,
+            "Total": 103.5
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 3.5,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE13",
+          "Module_UE": "Analyse des données massives",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Visualisation des Données Massives",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 15,
+                "Total": 46.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Analyse factorielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 15,
+                "Total": 46.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 30,
+            "Total": 93
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE14",
+          "Module_UE": "Innovation & éthique",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Gestion de l’innovation",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10,
+                "TP": 0,
+                "Total": 31
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Ethique scientifique, Droit d’Auteur & Plagiat",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10,
+                "TP": 0,
+                "Total": 31
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 3,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 20,
+            "TP": 0,
+            "Total": 62
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 3,
+          "Régime_UE": "X"
+        },
+        {
+          "Code_UE": "UE15",
+          "Module_UE": "U.E. Optionnelle (2 modules au choix)",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Atelier modèles statistiques sous R",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 2,
+              "Régime": "X"
+            },
+            {
+              "Matiere_ECUE": "Analyse et Programmation avec Python",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 15,
+                "Total": 57
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 2,
+              "Régime": "X"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 42,
+            "TP": 30,
+            "Total": 114
+          },
+          "Crédits_UE": 4,
+          "Coefficient_UE": 2,
+          "Régime_UE": "X"
+        }
+      ],
+      "Total_Horaire_Présentiel": {
+        "Cours": 346.5,
+        "TD": 220.5,
+        "TP": 10.5,
+        "Total": 577.5
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    }
+  ]
+}

@@ -1,0 +1,918 @@
+{
+  "Niveau": "Master Professionnel",
+  "Spécialité": "Commande des Systèmes Industriels (CSI)",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Code_UE": "UEF110",
+          "Module_UE": "Analyse et modélisation",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Recherche opérationnelle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Intelligence artificielle et machine learning",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 0,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 5,
+          "Coefficient_UE": 5,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEF120",
+          "Module_UE": "Electrotechnique",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "électrotechnique",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Modélisation et gestion des réseaux électriques",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEF130",
+          "Module_UE": "Informatique I",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Programmation orientée objet avancé",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 42
+              },
+              "Crédits_ECUE": 4,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 4,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Mini Projet : Informatique I",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 0,
+            "TP": 42,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEO140",
+          "Module_UE": "Traitement de signal et vision",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Vision Industrielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Traitement de signal et transmission",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 10.5,
+            "TP": 31.5,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UET150",
+          "Module_UE": "Conduite de projet & Langues Certifications",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Management de l'entreprise",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Anglais1 : Préparation TOIEC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Préparation à la certification Labview",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 5,
+          "Coefficient_UE": 5,
+          "Régime_d'examen_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 168,
+        "TD": 73.5,
+        "TP": 115.5,
+        "Autres": 0,
+        "Total": 357
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Code_UE": "UEF210",
+          "Module_UE": "Automatique",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Modélisation et identification des systèmes",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Automatique linéaire et non linéaire",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEF220",
+          "Module_UE": "Électronique de puissance",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "électronique de puissance et composants",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Convertisseurs statiques",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEF230",
+          "Module_UE": "Commande industrielle",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "API",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Commande Robotique",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEO240",
+          "Module_UE": "sureté de fonctionnement et Qualité",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Qualité et normes",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Sureté de fonctionnement et maintenance",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier GQAO",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 5,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 5,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 35,
+            "TD": 17.5,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 73.5
+          },
+          "Crédits_UE": 5,
+          "Coefficient_UE": 5,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UET250",
+          "Module_UE": "Conduite de projet & Langues",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Management d'Equipe et Leadership",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1.5,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 4,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Anglais II : Préparation TOIEC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1.5,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 4,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Préparation à la certification python",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 4,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 4,
+          "Coefficient_UE": 4,
+          "Régime_d'examen_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 154,
+        "TD": 87.5,
+        "TP": 105,
+        "Autres": 0,
+        "Total": 346.5
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Code_UE": "UEF310",
+          "Module_UE": "Régulation et Instrumentation Industrielles",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Régulation industrielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Instrumentation Industrielle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEF320",
+          "Module_UE": "Commande machines",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Modélisation & Commande des machines à courant continu",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "Autres": 0,
+                "Total": 42
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Modélisation & Commande des machines à courant alternatif",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "Autres": 0,
+                "Total": 42
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEF330",
+          "Module_UE": "Réseaux Industriels",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Réseaux locaux industriels et supervision",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Réseaux de capteurs sans fils",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Mini projet : Internet des objets (IoT)",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEO340",
+          "Module_UE": "Management des processus de production",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Gestion de la production",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Modélisation et simulation des flux",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier de simulation des flux",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Régime_d'examen_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UET350",
+          "Module_UE": "Conduite de projet Certifications",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Entrepreneuriat et Business plan",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1.5,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 4,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Anglais",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1.5,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1.5,
+              "Coefficient_UE": 4,
+              "Régime_d'examen": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Préparation à la certification GMAO",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 1,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 1,
+              "Coefficient_UE": 4,
+              "Régime_d'examen": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 4,
+          "Coefficient_UE": 4,
+          "Régime_d'examen_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 161,
+        "TD": 91,
+        "TP": 105,
+        "Autres": 0,
+        "Total": 357
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    }
+  ]
+}

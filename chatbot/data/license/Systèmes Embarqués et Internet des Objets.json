@@ -1,0 +1,1214 @@
+{
+  "Diplome": "Licence en Ingénierie des Systèmes Informatiques",
+  "Parcours": "Systèmes Embarqués et Internet des Objets",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Module": "Matériels et logiciels 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573299131",
+              "Matiere": "systéme d'exploitation 1",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573299132",
+              "Matiere": "systémes logiques",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Physique 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573299121",
+              "Matiere": "électricité -électronique",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 31.5,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "573299122",
+              "Matiere": "propagation et rayonnement",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 1",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573299111",
+              "Matiere": "analyse 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573299110",
+              "Matiere": "algébre 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Algorithmique et programmation 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573299142",
+              "Matiere": "atelier programmation 1",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 0,
+                "TP": 31.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573299141",
+              "Matiere": "algorithmique et structures de données",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langue et culture d'entreprise",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573299151",
+              "Matiere": "anglais 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573299152",
+              "Matiere": "techniques de communication 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Module": "Physique 2",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573299222",
+              "Matiere": "initiation au traitement du signal",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573299221",
+              "Matiere": "fonctions électroniques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Algorithmique et programmation 2",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573299241",
+              "Matiere": "algorithmique ,structures des données",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573299242",
+              "Matiere": "atelier programmation 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Matériels et réseaux",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573299232",
+              "Matiere": "transmission de données",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573299231",
+              "Matiere": "architecture des ordinateurs",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Systémes d'exploitation",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573299251",
+              "Matiere": "systémes d'exploitation 2",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 2",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573299212",
+              "Matiere": "analyse 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573299211",
+              "Matiere": "algébre 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et culture numérique",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573299263",
+              "Matiere": "culture et compétences numériques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573299261",
+              "Matiere": "anglais 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573299262",
+              "Matiere": "techniques de communication 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Module": "Pobailité et optimisation",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573201312",
+              "Matiere": "Probabilité statistique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573201311",
+              "Matiere": "Graphes et optimisation",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Réseaux locaux et Tech.Multémidia",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573201314",
+              "Matiere": "Technologies Multémidia",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573201313",
+              "Matiere": "Réseaux locaux et industriels",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 31.5,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Systémes d'information",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573201315",
+              "Matiere": "Méthodologie de conception de logiciel",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573201316",
+              "Matiere": "Fondements des bases de données",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Programmation",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573201318",
+              "Matiere": "Programmation on python",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573201317",
+              "Matiere": "Programmation orientée objet",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et culture d'entreprise",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573201320",
+              "Matiere": "Culture d'entreprise",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573201319",
+              "Matiere": "Anglais 3",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UEO",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169919456",
+              "Matiere": "Programmation Java",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169919457",
+              "Matiere": "MOS",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UEO",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169923817",
+              "Matiere": "Certification Fondamentaux de l'administration des bases de données",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169923818",
+              "Matiere": "Certification développement d'application HTML5",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Certification",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169927765",
+              "Matiere": "Certification développement d'application HTML",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169927764",
+              "Matiere": "Conception des systèmes d'information",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 4,
+      "UE": [
+        {
+          "Module": "Technologies pour systémes Embarqués",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573201413",
+              "Matiere": "Conception des circuits logiques & synthése VHDL**",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 52.5
+              }
+            },
+            {
+              "Code_EE": "573201414",
+              "Matiere": "Systéme sur puce (SoC)& Technologies d'interfaçage",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 31.5,
+                "TD": 10.5,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 63
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Test logiciel &sécurité informatique",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573201415",
+              "Matiere": "Test logiciel ( Certification ISTQB)",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573201416",
+              "Matiere": "Sécurité informatique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Programmation on Web & Mobile",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573201412",
+              "Matiere": "Développement Mobile",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573201411",
+              "Matiere": "Programmation on web",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langue et étique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "573201419",
+              "Matiere": "Projet fédéré (méthode argile)",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573201417",
+              "Matiere": "anglais 4",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573201418",
+              "Matiere": "Droit informatique ,protection des données et éthique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UEO",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169919458",
+              "Matiere": "Fondement Physique des capteurs",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169919459",
+              "Matiere": "Fondements et Programmation IA",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UEO",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169923821",
+              "Matiere": "Certification introduction à la programmation avec JAVA",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169923819",
+              "Matiere": "Certification Fondamentaux des Reseaux",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 5,
+      "UE": [
+        {
+          "Module": "Architecture et sécurité pour l'IOT",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "573201521",
+              "Matiere": "Architecture IoT",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573201522",
+              "Matiere": "Sécurité IoT",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Réseaux sans fils et Cloud",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573201531",
+              "Matiere": "Cloud et Virtualisation",
+              "Coef": 2,
+              "Cr": 4,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573201532",
+              "Matiere": "Technologie des réseaux sans fil pour l'IoT",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Big data & IA",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "573201512",
+              "Matiere": "Big data",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "573201511",
+              "Matiere": "IA et Machine learning",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Conception et Mise en oeuvre de systèmes",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "573201542",
+              "Matiere": "Conception d'objets connectés (Co-design )",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "573201541",
+              "Matiere": "Systèmes temps réel",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 10.5,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langue et Entreprenariat",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "573201552",
+              "Matiere": "Entreprenariat",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573201551",
+              "Matiere": "Anglais 5",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "573201553",
+              "Matiere": "Préparation à l'environnement professionnel",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Gestion de Projets",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "169927762",
+              "Matiere": "Blockchaine",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169927763",
+              "Matiere": "Gestion de Projets",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Gestion de Projets",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "169929600",
+              "Matiere": "Développement d'applications réparties",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169929601",
+              "Matiere": "Gestion de Projets",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UEO",
+          "Cr": 4,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169923822",
+              "Matiere": "Réseau Satellitaire",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169923823",
+              "Matiere": "Cisco-CCNA1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

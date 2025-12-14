@@ -1,0 +1,215 @@
+{
+  "demarches_administratives": {
+    "attestation_de_presence": {
+      "titre": "Attestation de Présence",
+      "description": "Document certifiant votre présence à l'établissement",
+      "etapes": [
+        {
+          "numero": 1,
+          "action": "Connexion à la plateforme",
+          "details": "Se connecter à la plateforme étudiante",
+          "duree": "Immédiat",
+          "prerequis": "Identifiants étudiants"
+        },
+        {
+          "numero": 2,
+          "action": "Sélection du type de document",
+          "details": "Choisir 'Attestation de présence' dans le menu",
+          "duree": "2 minutes",
+          "prerequis": "Aucun"
+        },
+        {
+          "numero": 3,
+          "action": "Choix de la langue",
+          "details": "Sélectionner la langue du document (Français/Arabe)",
+          "duree": "1 minute",
+          "prerequis": "Aucun"
+        },
+        {
+          "numero": 4,
+          "action": "Saisie de l'annee",
+          "details": "Entrer votre numéro année scolaire",
+          "duree": "2 minutes",
+          "prerequis": "Avoir son numéro année"
+        },
+        {
+          "numero": 5,
+          "action": "Taguer 2 professeurs",
+          "details": "Sélectionner 2 professeurs dans la liste pour validation",
+          "duree": "3 minutes",
+          "prerequis": "Connaître les noms des professeurs concernés"
+        },
+        {
+          "numero": 6,
+          "action": "Attente des validations",
+          "details": "Patienter que les 2 professeurs approuvent la demande",
+          "duree": "1 à 3 jours ouvrables",
+          "prerequis": "Demande soumise",
+          "notifications": "Alertes par email à chaque validation"
+        },
+        {
+          "numero": 7,
+          "action": "Traitement par la scolarité",
+          "details": "Le service scolarité prépare le document officiel",
+          "duree": "1 jour après validation complète",
+          "prerequis": "Validations complètes des 2 professeurs"
+        },
+        {
+          "numero": 8,
+          "action": "Dépôt en ligne",
+          "details": "La scolarité dépose le document signé sur la plateforme",
+          "duree": "Immédiat",
+          "prerequis": "Document préparé"
+        },
+        {
+          "numero": 9,
+          "action": "Récupération du document",
+          "details": "Deux options disponibles :",
+          "options": [
+            {
+              "methode": "En ligne",
+              "details": "Télécharger depuis votre espace étudiant",
+              "format": "PDF signé électroniquement"
+            },
+            {
+              "methode": "En personne",
+              "details": "Retirer au bureau de la scolarité",
+              "horaires": "Lundi-Vendredi 9h-12h / 14h-17h"
+            }
+          ],
+          "duree": "Immédiat (en ligne) ou 10 minutes (en personne)"
+        }
+      ],
+      "delai_total": "2 jours ouvrables",
+      "validite": "3 mois",
+      "conseils": [
+        "Taguer des professeurs qui vous connaissent bien",
+        "Vérifier vos notifications régulièrement",
+        "Télécharger rapidement une fois disponible",
+        "Garder une copie numérique"
+      ]
+    },
+
+    "releve_de_notes/ Attestation de Réussite / Attestation d'inscription": {
+      "titre": "Relevé de Notes / Attestation de Réussite / Attestation d'inscription",
+      "description": "Document officiel listant vos notes et attestant votre réussite",
+      "etapes": [
+        {
+          "numero": 1,
+          "action": "Demande en ligne",
+          "details": "Remplir le formulaire de demande dans la plateforme",
+          "duree": "5 minutes"
+        },
+        {
+          "numero": 2,
+          "action": "Soumission",
+          "details": "Valider et soumettre la demande",
+          "duree": "1 minute",
+          "prerequis": "Formulaire complété"
+        },
+        {
+          "numero": 3,
+          "action": "Attente du traitement",
+          "details": "La demande passe dans la file d'attente de la scolarité",
+          "duree": "1 jour ouvrable",
+          "prerequis": "Demande soumise"
+        },
+        {
+          "numero": 4,
+          "action": "Traitement par la scolarité",
+          "details": "Vérification des données et préparation du document",
+          "duree": "1 à 2 jours",
+          "prerequis": "Tour de traitement atteint"
+        },
+        {
+          "numero": 5,
+          "action": "Dépôt du document",
+          "details": "La scolarité dépose le document finalisé sur la plateforme",
+          "duree": "Immédiat",
+          "prerequis": "Document vérifié et signé"
+        },
+        {
+          "numero": 6,
+          "action": "Notification",
+          "details": "Réception d'une notification de disponibilité",
+          "duree": "Immédiat",
+          "prerequis": "Document déposé"
+        },
+        {
+          "numero": 7,
+          "action": "Récupération",
+          "details": "Téléchargement depuis votre espace",
+          "duree": "2 minutes",
+          "options": [
+            "Format PDF (standard)"
+          ]
+        }
+      ],
+      "delai_total": "1 à 2 jours ouvrables",
+      "validite": "1 an",
+      "conseils": [
+        "Faire la demande avant les périodes de forte affluence",
+        "Vérifier l'exactitude des informations",
+        "Demander la version certifiée pour les dossiers officiels",
+        "Sauvegarder plusieurs copies"
+      ]
+    },
+
+    "attestation_de_diplome": {
+      "titre": "Attestation de Diplôme",
+      "description": "Document prouvant votre obtention de diplôme",
+      "etapes": [
+        {
+          "numero": 1,
+          "action": "Demande via formulaire dédié",
+          "details": "Accéder au service 'Documents administratifs'",
+          "duree": "3 minutes"
+        },
+        {
+          "numero": 2,
+          "action": "Sélection du document spécifique",
+          "details": "Choisir entre attestation de scolarité ou attestation de diplôme",
+          "duree": "2 minutes"
+        },
+        {
+          "numero": 3,
+          "action": "Traitement automatique ou manuel",
+          "details": "Selon le type, traitement automatique ou validation requise",
+          "duree": "24h à 5 jours",
+          "conditions": "manuel pour diplôme"
+        },
+        {
+          "numero": 4,
+          "action": "Récupération",
+          "details": "Disponible immédiatement après traitement",
+          "duree": "2 minutes"
+        }
+      ],
+      "delai_total": "1 à 5 jours",
+      "cout": "Gratuit",
+      "validite": "Variable selon usage"
+    }
+  },
+
+  "informations_generales": {
+    "horaires_bureau": "Lun-Ven 9h-12h / 14h-17h",
+    "urgence": "Pour urgence justifiée, contacter directement avec preuve",
+    "périodes_affluence": [
+      "Septembre-Octobre (rentrée)",
+      "Janvier (début semestre)",
+      "Juin-Juillet (fin d'année)"
+    ]
+  },
+
+  "statut_demandes": {
+    "codes": {
+      "EN_ATTENTE": "En attente de validation",
+      "VALIDATION_PROFS": "Attente validation professeurs",
+      "TRAITEMENT_SCOLARITE": "En cours de traitement",
+      "PRET": "Document disponible",
+      "REFUSE": "Demande refusée (raison spécifiée)"
+    },
+    "suivi": "Disponible dans 'Mes demandes' sur la plateforme",
+    "notifications": "Email à chaque changement de statut"
+  }
+}
