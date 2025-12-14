@@ -37,14 +37,16 @@ class ReclamationCreateSerializer(serializers.ModelSerializer):
         fields = ['id', 'category', 'description', 'file', 'is_anonymous']
 
 class ReclamationAdminUpdateSerializer(serializers.ModelSerializer):
-    comment = serializers.CharField(write_only=True, required=False)
+    comment = serializers.CharField(write_only=True, required=False, allow_blank=True)
+    response = serializers.CharField(write_only=True, required=False, allow_blank=True)
     
     class Meta:
         model = Reclamation
-        fields = ['status', 'category', 'comment']
+        fields = ['status', 'category', 'comment', 'response']
 
     def update(self, instance, validated_data):
-        comment = validated_data.pop('comment', None)
+        # Accept both 'comment' and 'response' fields
+        comment = validated_data.pop('comment', None) or validated_data.pop('response', None)
         old_status = instance.status
         new_status = validated_data.get('status', old_status)
         

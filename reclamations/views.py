@@ -20,8 +20,8 @@ class ReclamationListCreateView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        # Admins see all
-        if user.is_staff or user.role == User.Role.ADMINISTRATOR:
+        # Admins and Scolar Admins see all
+        if user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]:
             return Reclamation.objects.all()
         # Teachers see only ENSEIGNEMENT category
         elif user.role == User.Role.TEACHER:
@@ -45,7 +45,7 @@ class ReclamationDetailView(generics.RetrieveUpdateDestroyAPIView):
     
     def get_queryset(self):
         user = self.request.user
-        if user.is_staff or user.role == User.Role.ADMINISTRATOR:
+        if user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]:
             return Reclamation.objects.all()
         elif user.role == User.Role.TEACHER:
             return Reclamation.objects.filter(category=Reclamation.Category.ENSEIGNEMENT)
@@ -60,17 +60,13 @@ class ReclamationDetailView(generics.RetrieveUpdateDestroyAPIView):
     def perform_update(self, serializer):
         # Check permission for update
         user = self.request.user
-    def perform_update(self, serializer):
-        # Check permission for update
-        user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR or user.role == User.Role.TEACHER):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR, User.Role.TEACHER]):
              raise permissions.PermissionDenied("You do not have permission to update this reclamation.")
-        serializer.save()
         serializer.save()
 
     def perform_destroy(self, instance):
         user = self.request.user
-        if user.is_staff or user.role == User.Role.ADMINISTRATOR:
+        if user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]:
             instance.delete()
         # Student can only delete their own reclamation
         elif instance.student == user:

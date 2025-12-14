@@ -84,6 +84,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     cin = models.IntegerField(unique=True, null=True, blank=True)
     first_name = models.CharField(max_length=150, blank=True)
     last_name = models.CharField(max_length=150, blank=True)
+    phone = models.CharField(max_length=20, blank=True, null=True)
     first_name_arabic = models.CharField(max_length=150, blank=True)
     last_name_arabic = models.CharField(max_length=150, blank=True)
     role = models.CharField(

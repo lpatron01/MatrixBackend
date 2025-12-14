@@ -8,6 +8,7 @@ urlpatterns = [
     path("api/reclamations/", include("reclamations.urls")),
     path("api/documents/", include("document_requests.urls")),
     path("api/classroom/", include("classroom.urls")),
+    path("api/clubs/", include("clubs.urls")),
 ]
 
 

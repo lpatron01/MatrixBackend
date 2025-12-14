@@ -34,7 +34,7 @@ class DocumentRequestListCreateView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         user = self.request.user
-        if user.is_staff or user.role == User.Role.ADMINISTRATOR:
+        if user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]:
             return DocumentRequest.objects.all()
         return DocumentRequest.objects.filter(student=user)
 
@@ -67,13 +67,13 @@ class DocumentRequestDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     def perform_update(self, serializer):
         user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]):
              raise permissions.PermissionDenied("You do not have permission to update this request.")
         serializer.save()
 
     def perform_destroy(self, instance):
         user = self.request.user
-        if user.is_staff or user.role == User.Role.ADMINISTRATOR:
+        if user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]:
             instance.delete()
         elif instance.student == user:
             instance.delete()
@@ -91,7 +91,7 @@ class TerminateDocumentRequestView(generics.UpdateAPIView):
 
     def perform_update(self, serializer):
         user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]):
             raise permissions.PermissionDenied("You do not have permission to terminate this request.")
         serializer.instance.status = DocumentRequest.Status.READY
         serializer.save(changed_by=user, comment="Demande terminée.")
@@ -106,7 +106,7 @@ class RejectDocumentRequestView(generics.UpdateAPIView):
 
     def perform_update(self, serializer):
         user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]):
             raise permissions.PermissionDenied("You do not have permission to reject this request.")
         serializer.instance.status = DocumentRequest.Status.REJECTED
         serializer.save(changed_by=user, comment="Demande rejetée.")
@@ -121,7 +121,7 @@ class ProcessDocumentRequestView(generics.UpdateAPIView):
 
     def perform_update(self, serializer):
         user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]):
             raise permissions.PermissionDenied("You do not have permission to process this request.")
         serializer.instance.status = DocumentRequest.Status.IN_PROGRESS
         serializer.save(changed_by=user, comment="Demande en cours de traitement.")
@@ -138,7 +138,8 @@ class DocumentRequestFileView(generics.RetrieveAPIView):
         instance = self.get_object()
         user = self.request.user
 
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+        # Allow admins, staff, or the document owner to download
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR] or instance.student == user):
             raise permissions.PermissionDenied("You do not have permission to access this file.")
 
         if not instance.pdf_file:
@@ -159,7 +160,7 @@ class DocumentRequestUploadFileView(generics.UpdateAPIView):
 
     def perform_update(self, serializer):
         user = self.request.user
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR]):
             raise permissions.PermissionDenied("You do not have permission to upload this file.")
         serializer.save()
 
@@ -174,7 +175,7 @@ class GenerateInscriptionCertificateView(generics.RetrieveAPIView):
         instance = self.get_object()
         user = self.request.user
 
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR or instance.student == user):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR] or instance.student == user):
             raise permissions.PermissionDenied("You do not have permission to access this certificate.")
         
         if instance.document_type != DocumentRequest.DocumentType.CERTIFICATE_INSCRIPTION:
@@ -197,19 +198,19 @@ class GenerateInscriptionCertificateView(generics.RetrieveAPIView):
             else:
                 logger.warning("No education history found for student.")
 
-        # Prepare certificate data
+        # Prepare certificate data with safe null handling
         certificate_data = {
-            'name': student.first_name_arabic if alanguage == 'ar' else student.first_name,
-            'surname': student.last_name_arabic if alanguage == 'ar' else student.last_name,
+            'name': (student.first_name_arabic if alanguage == 'ar' else student.first_name) or '',
+            'surname': (student.last_name_arabic if alanguage == 'ar' else student.last_name) or '',
             'birth_date': student.date_of_birth.strftime('%Y/%m/%d') if student.date_of_birth else '',
-            'birth_place': student.place_of_birth_arabic if alanguage == 'ar' else student.place_of_birth,
+            'birth_place': (student.place_of_birth_arabic if alanguage == 'ar' else student.place_of_birth) or '',
             'national_id': str(student.cin) if student.cin else '',
-            'year_class': EducationHistory.Grade.get_grade_display_by_language(education_history.grade, alanguage) if education_history else '',
-            'registration_code': education_history.class_name if education_history else '',
-            'certificate_type': User.DiplomaChoices.get_diploma_display_by_language(student.diploma, alanguage), # Use diploma from User model based on language
-            'specialization': 'جذع مشترك' if alanguage == 'ar' else education_history.specialty   ,
-            'registration_number': str(education_history.registration_id) if education_history else '',
-            'year': instance.academic_year, # Use academic year from document request
+            'year_class': EducationHistory.Grade.get_grade_display_by_language(education_history.grade, alanguage) if education_history and education_history.grade else '',
+            'registration_code': education_history.class_name if education_history and education_history.class_name else '',
+            'certificate_type': User.DiplomaChoices.get_diploma_display_by_language(student.diploma, alanguage) if student.diploma else ('غير محدد' if alanguage == 'ar' else 'Non spécifié'),
+            'specialization': ('جذع مشترك' if alanguage == 'ar' else (education_history.specialty if education_history and education_history.specialty else 'Non spécifié')),
+            'registration_number': str(education_history.registration_id) if education_history and education_history.registration_id else '',
+            'year': instance.academic_year or '', # Use academic year from document request
             'issue_date': instance.updated_at.strftime('%Y/%m/%d') if instance.updated_at else '',
         }
 
@@ -262,7 +263,7 @@ class GeneratePresenceCertificateView(generics.RetrieveAPIView):
         instance = self.get_object()
         user = self.request.user
 
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR or instance.student == user):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR] or instance.student == user):
             raise permissions.PermissionDenied("You do not have permission to access this certificate.")
 
         if instance.document_type != DocumentRequest.DocumentType.CERTIFICATE_PRESENCE:
@@ -285,19 +286,19 @@ class GeneratePresenceCertificateView(generics.RetrieveAPIView):
             else:
                 logger.warning("No education history found for student.")
 
-        # Prepare certificate data
+        # Prepare certificate data with safe null handling
         certificate_data = {
-            'name': student.first_name_arabic if alanguage == 'ar' else student.first_name,
-            'surname': student.last_name_arabic if alanguage == 'ar' else student.last_name,
+            'name': (student.first_name_arabic if alanguage == 'ar' else student.first_name) or '',
+            'surname': (student.last_name_arabic if alanguage == 'ar' else student.last_name) or '',
             'birth_date': student.date_of_birth.strftime('%Y/%m/%d') if student.date_of_birth else '',
-            'birth_place': student.place_of_birth_arabic if alanguage == 'ar' else student.place_of_birth,
+            'birth_place': (student.place_of_birth_arabic if alanguage == 'ar' else student.place_of_birth) or '',
             'national_id': str(student.cin) if student.cin else '',
-            'year_class': EducationHistory.Grade.get_grade_display_by_language(education_history.grade, alanguage) if education_history else '',
-            'registration_code': education_history.class_name if education_history else '',
-            'certificate_type': User.DiplomaChoices.get_diploma_display_by_language(student.diploma, alanguage), # Use diploma from User model based on language
-            'specialization': 'جذع مشترك' if alanguage == 'ar' else education_history.specialty,
-            'registration_number': str(education_history.registration_id) if education_history else '',
-            'year': instance.academic_year, # Use academic year from document request
+            'year_class': EducationHistory.Grade.get_grade_display_by_language(education_history.grade, alanguage) if education_history and education_history.grade else '',
+            'registration_code': education_history.class_name if education_history and education_history.class_name else '',
+            'certificate_type': User.DiplomaChoices.get_diploma_display_by_language(student.diploma, alanguage) if student.diploma else ('غير محدد' if alanguage == 'ar' else 'Non spécifié'),
+            'specialization': ('جذع مشترك' if alanguage == 'ar' else (education_history.specialty if education_history and education_history.specialty else 'Non spécifié')),
+            'registration_number': str(education_history.registration_id) if education_history and education_history.registration_id else '',
+            'year': instance.academic_year or '', # Use academic year from document request
             'issue_date': instance.updated_at.strftime('%Y/%m/%d') if instance.updated_at else '',
         }
 
@@ -484,7 +485,7 @@ class GenerateSuccessCertificateView(generics.RetrieveAPIView):
         instance = self.get_object()
         user = self.request.user
 
-        if not (user.is_staff or user.role == User.Role.ADMINISTRATOR or instance.student == user):
+        if not (user.is_staff or user.role in [User.Role.ADMINISTRATOR, User.Role.SCOLAR_ADMINISTRATOR] or instance.student == user):
             raise permissions.PermissionDenied("You do not have permission to access this certificate.")
 
         if instance.document_type != DocumentRequest.DocumentType.CERTIFICATE_SUCCESS:
@@ -507,18 +508,18 @@ class GenerateSuccessCertificateView(generics.RetrieveAPIView):
             else:
                 logger.warning("No education history found for student.")
 
-        # Prepare certificate data
+        # Prepare certificate data with safe null handling
         certificate_data = {
-            'name': student.first_name_arabic if alanguage == 'ar' else student.first_name,
-            'surname': student.last_name_arabic if alanguage == 'ar' else student.last_name,
+            'name': (student.first_name_arabic if alanguage == 'ar' else student.first_name) or '',
+            'surname': (student.last_name_arabic if alanguage == 'ar' else student.last_name) or '',
             'birth_date': student.date_of_birth.strftime('%Y/%m/%d') if student.date_of_birth else '',
-            'birth_place': student.place_of_birth_arabic if alanguage == 'ar' else student.place_of_birth,
+            'birth_place': (student.place_of_birth_arabic if alanguage == 'ar' else student.place_of_birth) or '',
             'national_id': str(student.cin) if student.cin else '',
-            'registration_number': str(education_history.registration_id) if education_history else '',
-            'registration_code': education_history.class_name if education_history else '',
-            'year': instance.academic_year, # Use academic year from document request
-            'certificate_type': User.DiplomaChoices.get_diploma_display_by_language(student.diploma, alanguage), # Use diploma from User model based on language
-            'specialization': 'جذع مشترك' if alanguage == 'ar' else education_history.specialty,
+            'registration_number': str(education_history.registration_id) if education_history and education_history.registration_id else '',
+            'registration_code': education_history.class_name if education_history and education_history.class_name else '',
+            'year': instance.academic_year or '', # Use academic year from document request
+            'certificate_type': User.DiplomaChoices.get_diploma_display_by_language(student.diploma, alanguage) if student.diploma else ('غير محدد' if alanguage == 'ar' else 'Non spécifié'),
+            'specialization': ('جذع مشترك' if alanguage == 'ar' else (education_history.specialty if education_history and education_history.specialty else 'Non spécifié')),
             'grade': 'حسن' if alanguage == 'ar' else 'Bien',  # Default grade, could be made dynamic
             'issue_date': instance.updated_at.strftime('%Y/%m/%d') if instance.updated_at else '',
         }

@@ -40,10 +40,10 @@ class UserSerializer(serializers.ModelSerializer):
             "email",
             "first_name",
             "last_name",
+            "phone",
             "role",
             "role_display",
             "cin",
-            "diploma",
             "date_of_birth",
             "place_of_birth",
             "is_active",
@@ -59,7 +59,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "password", "first_name", "last_name", "role", "cin", "date_of_birth", "place_of_birth")
+        fields = ("email", "password", "first_name", "last_name", "phone", "role", "cin", "date_of_birth", "place_of_birth")
 
     def validate_password(self, value):
         password_validation.validate_password(value, self.instance)
@@ -76,7 +76,16 @@ class UserCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ("email", "password", "first_name", "last_name", "role", "cin", "diploma", "date_of_birth", "place_of_birth", "is_active", "is_staff", "date_joined"   )
+        fields = ("email", "password", "first_name", "last_name", "phone", "role", "cin", "date_of_birth", "place_of_birth", "is_active", "is_staff", "date_joined")
+
+    def validate_cin(self, value):
+        """Convert cin from string to int, handle empty values"""
+        if value is None or value == '':
+            return None
+        try:
+            return int(value)
+        except (ValueError, TypeError):
+            raise serializers.ValidationError("CIN must be a valid number")
 
     def validate_password(self, value):
         password_validation.validate_password(value, self.instance)
@@ -90,24 +99,43 @@ class UserCreateSerializer(serializers.ModelSerializer):
         return User.objects.create_user(password=password, **validated_data)
 
 
+
 class UserUpdateSerializer(serializers.ModelSerializer):
     """Serializer for updating user details"""
-    password = serializers.CharField(write_only=True, min_length=8, required=False)
+    password = serializers.CharField(write_only=True, min_length=8, required=False, allow_blank=True)
 
     class Meta:
         model = User
-        fields = ("email", "password", "first_name", "last_name", "role", "cin", "diploma", "date_of_birth", "place_of_birth", "is_active", "is_staff", "date_joined"   )
-        read_only_fields = ("email",)  
+        fields = ("email", "password", "first_name", "last_name", "phone", "role", "cin", "diploma", "date_of_birth", "place_of_birth", "is_active", "is_staff", "date_joined")
+        read_only_fields = ("cin",)  # CIN cannot be modified
+
+    def validate_email(self, value):
+        """Validate email uniqueness when updating"""
+        if value and value != self.instance.email:
+            if User.objects.filter(email=value).exists():
+                raise serializers.ValidationError("A user with this email already exists.")
+        return value
+
+    def validate_cin(self, value):
+        """Convert cin from string to int, handle empty values"""
+        if value is None or value == '':
+            return None
+        try:
+            return int(value)
+        except (ValueError, TypeError):
+            raise serializers.ValidationError("CIN must be a valid number")
 
     def validate_password(self, value):
-        password_validation.validate_password(value, self.instance)
+        """Validate password if provided"""
+        if value:  # Only validate if password is actually provided
+            password_validation.validate_password(value, self.instance)
         return value
 
     def update(self, instance, validated_data):
         password = validated_data.pop("password", None)
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
-        if password:
+        if password:  # Only update password if provided and not empty
             instance.set_password(password)
         instance.save()
         return instance
