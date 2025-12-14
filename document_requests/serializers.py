@@ -14,14 +14,34 @@ class DocumentRequestSerializer(serializers.ModelSerializer):
     id = serializers.UUIDField(source='public_id', read_only=True)
     student = UserSerializer(read_only=True)
     history = DocumentRequestHistorySerializer(many=True, read_only=True)
+    presence_approvals = serializers.SerializerMethodField()
 
     class Meta:
         model = DocumentRequest
         fields = [
             'id', 'student', 'document_type', 'status', 'additional_info', 'academic_year', 
-            'created_at', 'updated_at', 'history', 'language', 'reception_type'
+            'created_at', 'updated_at', 'history', 'language', 'reception_type', 'presence_approvals'
         ]
-        read_only_fields = ['id', 'created_at', 'updated_at', 'status', 'history']
+        read_only_fields = ['id', 'created_at', 'updated_at', 'status', 'history', 'presence_approvals']
+    
+    def get_presence_approvals(self, obj):
+        """Return presence approvals only for CERTIFICATE_PRESENCE document type"""
+        if obj.document_type == 'CERTIFICATE_PRESENCE':
+            approvals = obj.presence_approvals.select_related('teacher').all()
+            return [{
+                'id': approval.id,
+                'teacher': {
+                    'id': approval.teacher.id,
+                    'first_name': approval.teacher.first_name,
+                    'last_name': approval.teacher.last_name,
+                    'email': approval.teacher.email
+                },
+                'status': approval.status,
+                'comment': approval.comment,
+                'created_at': approval.created_at,
+                'updated_at': approval.updated_at
+            } for approval in approvals]
+        return []
 
 class DocumentRequestCreateSerializer(serializers.ModelSerializer):
     id = serializers.UUIDField(source='public_id', read_only=True)
@@ -64,11 +84,11 @@ class DocumentRequestedFileSerializer(serializers.ModelSerializer):
 class PresenceRequestCreateSerializer(serializers.ModelSerializer):
     """Serializer for creating presence certificate requests with teacher selection"""
     teachers = serializers.ListField(
-        child=serializers.UUIDField(),
+        child=serializers.IntegerField(),
         min_length=2,
-        max_length=2,
+        max_length=5,
         write_only=True,
-        help_text="List of exactly 2 teacher UUIDs to approve this request"
+        help_text="List of 2-5 teacher IDs to approve this request"
     )
     id = serializers.UUIDField(source='public_id', read_only=True)
 
@@ -77,18 +97,20 @@ class PresenceRequestCreateSerializer(serializers.ModelSerializer):
         fields = ['id', 'language', 'reception_type', 'academic_year', 'teachers']
 
     def validate_teachers(self, value):
-        """Validate that exactly 2 teachers are selected and they exist"""
-        if len(value) != 2:
-            raise serializers.ValidationError("Exactly 2 teachers must be selected.")
+        """Validate that 2-5 teachers are selected and they exist"""
+        if len(value) < 2:
+            raise serializers.ValidationError("At least 2 teachers must be selected.")
+        if len(value) > 5:
+            raise serializers.ValidationError("Maximum 5 teachers can be selected.")
 
         teachers = User.objects.filter(
-            public_id__in=value,
+            pk__in=value,
             role=User.Role.TEACHER,
             is_active=True
         )
 
-        if teachers.count() != 2:
-            raise serializers.ValidationError("Selected users must be active teachers.")
+        if teachers.count() != len(value):
+            raise serializers.ValidationError("All selected users must be active teachers.")
 
         return teachers
 

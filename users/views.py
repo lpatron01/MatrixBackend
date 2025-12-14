@@ -243,6 +243,19 @@ class UserListView(generics.ListAPIView):
         return queryset
 
 
+class TeacherListView(generics.ListAPIView):
+    """
+    GET /api/users/teachers/
+    List all active teachers (Authenticated users only)
+    For use in document requests that require teacher approval
+    """
+    serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    
+    def get_queryset(self):
+        return User.objects.filter(role=User.Role.TEACHER, is_active=True)
+
+
 class UserCreateView(generics.CreateAPIView):
     """
     POST /api/users/create/
@@ -253,7 +266,11 @@ class UserCreateView(generics.CreateAPIView):
     permission_classes = [permissions.IsAdminUser]
 
     def create(self, request, *args, **kwargs):
+        print(f"Received data: {request.data}")
         serializer = self.get_serializer(data=request.data)
+        print(f"Serializer validation: {serializer.is_valid()}")
+        if not serializer.is_valid():
+            print(f"Validation errors: {serializer.errors}")
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         return Response(

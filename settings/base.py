@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     "reclamations",
     "document_requests",
     "classroom",
+    "schedule",
     "chatbot",
+    "clubs",
 ]
 
 MIDDLEWARE = [

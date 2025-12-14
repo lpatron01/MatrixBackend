@@ -102,11 +102,11 @@ class Attendance(models.Model):
         LATE = 'LATE', _('En retard')
         EXCUSED = 'EXCUSED', _('Excusé')
 
-    session = models.ForeignKey(Session, on_delete=models.CASCADE, related_name='attendances')
+    session = models.ForeignKey(Session, on_delete=models.CASCADE, related_name='schedule_attendances')
     student = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
-        related_name='attendances',
+        related_name='schedule_attendances',
         limit_choices_to={'role': 'student'}
     )
     date = models.DateField()
@@ -122,7 +122,7 @@ class Attendance(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
         null=True,
-        related_name='marked_attendances'
+        related_name='schedule_marked_attendances'
     )
     marked_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

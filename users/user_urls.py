@@ -5,6 +5,7 @@ from .views import (
     UserDeleteView,
     UserDetailView,
     UserListView,
+    TeacherListView,
     UserUpdateView,
     EducationHistoryCreateView,
     EducationHistoryDeleteView,
@@ -15,6 +16,7 @@ from .views import (
 
 urlpatterns = [
     path("", UserListView.as_view(), name="user-list"),
+    path("teachers/", TeacherListView.as_view(), name="teacher-list"),
     path("create/", UserCreateView.as_view(), name="user-create"),
     path("<int:pk>/", UserDetailView.as_view(), name="user-detail"),
     path("<int:pk>/update/", UserUpdateView.as_view(), name="user-update"),
