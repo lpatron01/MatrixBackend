@@ -1,0 +1,127 @@
+{
+  "absences_justifiees": [
+    {
+      "categorie": "Médical",
+      "raisons": [
+        "Rendez-vous médical (avec justificatif)",
+        "Urgence médicale",
+        "Hospitalisation",
+        "Rendez-vous chez le dentiste",
+        "Consultation spécialiste",
+        "Maladie contagieuse",
+        "Problème de santé chronique",
+        "Congé maternité/paternité"
+      ],
+      "preuve_requise": "Certificat médical ou attestation de rendez-vous",
+      "exemple": "Visite chez le médecin - apporter l'ordonnance ou le certificat"
+    },
+    {
+      "categorie": "Familial & Personnel",
+      "raisons": [
+        "Urgence familiale",
+        "Décès dans la famille",
+        "Maladie grave d'un proche",
+        "Mariage d'un membre de la famille",
+        "Problème de garde d'enfants",
+        "Accompagnement parent âgé"
+      ],
+      "preuve_requise": "Justificatif des parents/tuteurs",
+      "exemple": "Urgence familiale - les parents doivent prévenir l'établissement"
+    },
+    {
+      "categorie": "Administratif & Légal",
+      "raisons": [
+        "Convocation au tribunal",
+        "Service juridique (jury, témoignage)",
+        "Rendez-vous préfecture/police",
+        "Obligations légales",
+        "Service national"
+      ],
+      "preuve_requise": "Document officiel",
+      "exemple": "Convocation officielle - présenter le document"
+    },
+    {
+      "categorie": "Scolaire & Formation",
+      "raisons": [
+        "Sortie scolaire approuvée",
+        "Compétition sportive officielle",
+        "Concours académique",
+        "Visite d'université (avec autorisation)",
+        "Stage professionnel",
+        "Examen officiel (permis, diplôme)"
+      ],
+      "preuve_requise": "Autorisation de l'administration",
+      "exemple": "Sortie scolaire - faire signer l'autorisation"
+    },
+    {
+      "categorie": "Religieux & Culturel",
+      "raisons": [
+        "Fête religieuse",
+        "Cérémonie culturelle importante",
+        "Pèlerinage",
+        "Obsèques"
+      ],
+      "preuve_requise": "Attestation ou note des parents",
+      "exemple": "Fête religieuse - informer les professeurs à l'avance"
+    },
+    {
+      "categorie": "Transport & Force Majeure",
+      "raisons": [
+        "Problème de transport grave",
+        "Conditions météo extrêmes",
+        "Grève des transports",
+        "Événement exceptionnel"
+      ],
+      "preuve_requise": "Justificatif si possible",
+      "exemple": "Grève des transports - vérifier les consignes de l'établissement"
+    }
+  ],
+
+  "absences_non_justifiees": [
+    "Réveil tardif",
+    "Bus manqué",
+    "Vacances familiales non approuvées",
+    "Activités personnelles",
+    "Travail étudiant",
+    "Fête la veille",
+    "Simple fatigue"
+  ],
+
+  "demarches": {
+    "avant_absence": [
+      "Prévenir les professeurs si possible",
+      "Signaler à la vie scolaire"
+    ],
+    "apres_absence": [
+      "Déposer le justificatif sous 3 jours",
+      "Récupérer le travail manqué"
+    ]
+  },
+
+  "conseils": [
+    "Toujours garder une copie des justificatifs",
+    "Respecter les délais de justification",
+    "Consulter le règlement intérieur",
+    "Communiquer rapidement avec les professeurs",
+    "Tenir un dossier de vos absences"
+  ],
+
+  "questions_frequentes": [
+    {
+      "question": "Que faire si je suis malade sans aller chez le médecin ?",
+      "reponse": "Généralement, un mot des parents suffit pour 1-2 jours. Au-delà, certificat médical requis."
+    },
+    {
+      "question": "Combien d'absences justifiées sont autorisées ?",
+      "reponse": "Cela dépend du règlement. Même justifiées, trop d'absences peuvent poser problème."
+    },
+    {
+      "question": "Que se passe-t-il sans justificatif ?",
+      "reponse": "L'absence sera non justifiée, ce qui peut mener à des sanctions."
+    },
+    {
+      "question": "Puis-je justifier une absence après coup ?",
+      "reponse": "Oui, mais dans les délais imposés par l'établissement (généralement 48h-72h)."
+    }
+  ]
+}

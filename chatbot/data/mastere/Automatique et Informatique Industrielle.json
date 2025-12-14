@@ -1,0 +1,918 @@
+{
+  "Niveau": "Mastère Recherche",
+  "Mention": "Automatique et Informatique Industrielle",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Code_UE": "UE11",
+          "Module_UE": "Mathématiques appliquées",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Processus stochastiques",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Recherche opérationnelle",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier calcul numériques",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE12",
+          "Module_UE": "Automatique 1",
+          "ECUE": [
+            {
+              "Module_ECUE": "Commande dans l’espace d’état",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Identification des systèmes",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier automatique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE13",
+          "Module_UE": "Traitement de signal",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Traitement de signal numérique",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Traitement de signal analogique",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Traitement de signal",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEop14",
+          "Module_UE": "Systèmes électriques de puissance",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Electronique de puissance",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Machines électriques",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier électronique de puissance",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE15",
+          "Module_UE": "Anglais Scientifique et Informatique 1",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Anglais scientifique",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Programmation orientée objet",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier programmation",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 140,
+        "TD": 70,
+        "TP": 105,
+        "Autres": 0,
+        "Total": 315
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Code_UE": "UE21",
+          "Module_UE": "Automatique 2",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Commande optimale des systèmes dynamiques",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 21,
+                "Total": 52.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Observateurs et filtrage",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier observation et commande",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 21,
+            "Total": 105
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE22",
+          "Module_UE": "API et Réseaux Locaux Industriels",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Automates Programmables",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Réseaux locaux industriels et bus de terrain",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Réseaux",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE23",
+          "Module_UE": "Implémentation des lois de commande",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Implémentation sur DSP",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Implémentation sur FPGA",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier Implémentation des lois de commande",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEop24",
+          "Module_UE": "Automatique des systèmes de puissance",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Convertisseurs de puissance",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Commande de convertisseurs",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "commande de machines électriques",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE25",
+          "Module_UE": "Communication et recherche",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Techniques de communication",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 0,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 14
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Méthodologie de recherche",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 0,
+                "TP": 0,
+                "Autres": 10.5,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 24.5,
+            "TD": 0,
+            "TP": 0,
+            "Autres": 10.5,
+            "Total": 35
+          },
+          "Crédits_UE": 4,
+          "Coefficient_UE": 4,
+          "Modalité_évaluation_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 164.5,
+        "TD": 70,
+        "TP": 84,
+        "Autres": 31.5,
+        "Total": 350
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Code_UE": "UE31",
+          "Module_UE": "Commande des systèmes Non linéaires",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Commande non conventionnelle",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 21,
+                "Total": 52.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Commande adaptative et prédictive",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Commande robuste",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 63,
+            "TD": 31.5,
+            "TP": 0,
+            "Autres": 21,
+            "Total": 115.5
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE32",
+          "Module_UE": "Imagerie et robotique",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Traitement d'image",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Robotique",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 2.5,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2.5,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier robotique",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 7,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 7,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 84
+          },
+          "Crédits_UE": 7,
+          "Coefficient_UE": 7,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE33",
+          "Module_UE": "Sûreté de fonctionnement des systèmes",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Sureté de fonctionnement",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 21,
+                "Total": 52.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Diagnostic des systèmes",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 31.5
+              },
+              "Crédits_ECUE": 3,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 3,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 42,
+            "TD": 21,
+            "TP": 0,
+            "Autres": 21,
+            "Total": 84
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UE34",
+          "Module_UE": "Module Pédagogique et stage",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Module Pédagogique",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 0,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 14
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Stage de recherche",
+              "Volume_Horaire": {
+                "Cours": 7,
+                "TD": 0,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 7
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 4,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 4,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 21,
+            "TD": 0,
+            "TP": 0,
+            "Autres": 0,
+            "Total": 21
+          },
+          "Crédits_UE": 4,
+          "Coefficient_UE": 4,
+          "Modalité_évaluation_UE": "Régime mixte"
+        },
+        {
+          "Code_UE": "UEop35",
+          "Module_UE": "Surveillance des systèmes automatisés",
+          "ECUE": [
+            {
+              "Matiere_ECUE": "Modélisation et simulation des SAP",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Surveillance industrielle",
+              "Volume_Horaire": {
+                "Cours": 14,
+                "TD": 7,
+                "TP": 0,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            },
+            {
+              "Matiere_ECUE": "Atelier supervision",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "Autres": 0,
+                "Total": 21
+              },
+              "Crédits_ECUE": 2,
+              "Crédits_UE": 6,
+              "Coefficient_ECUE": 2,
+              "Coefficient_UE": 6,
+              "Modalité_évaluation": "Régime mixte"
+            }
+          ],
+          "Volume_Horaire_UE": {
+            "Cours": 28,
+            "TD": 14,
+            "TP": 21,
+            "Autres": 0,
+            "Total": 63
+          },
+          "Crédits_UE": 6,
+          "Coefficient_UE": 6,
+          "Modalité_évaluation_UE": "Régime mixte"
+        }
+      ],
+      "Total_Horaire": {
+        "Cours": 196,
+        "TD": 87,
+        "TP": 42,
+        "Autres": 42,
+        "Total": 367
+      },
+      "Total_Crédits": 30,
+      "Total_Coefficients": 30
+    }
+  ]
+}

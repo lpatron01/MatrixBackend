@@ -82,6 +82,26 @@ The API will be available at `http://localhost:8000/`
 
 ---
 
+## Available APIs
+
+The system provides the following API modules:
+
+### Core APIs
+- **Authentication**: `/api/auth/` - User registration, login, JWT tokens
+- **Users**: `/api/users/` - User management and profiles
+
+### Feature APIs
+- **Chatbot**: `/api/chatbot/` - AI-powered university assistant
+- **Classroom**: `/api/classroom/` - Course and classroom management
+- **Documents**: `/api/documents/` - Administrative document requests
+- **Reclamations**: `/api/reclamations/` - Student complaints system
+- **Schedule**: `/api/schedule/` - Academic scheduling
+
+### API Documentation
+Complete API documentation is available in the `API-Documentation/` directory.
+
+---
+
 ## Admin Panel
 
 Django admin panel is available at `/admin/` for staff users.

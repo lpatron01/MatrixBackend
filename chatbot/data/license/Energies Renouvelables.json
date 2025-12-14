@@ -1,0 +1,1130 @@
+{
+  "Diplome": "Licence en Génie énergétique",
+  "Parcours": "Energies Renouvelables",
+  "Semestres": [
+    {
+      "Semestre": 1,
+      "UE": [
+        {
+          "Module": "Conception et modélisation 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574498111",
+              "Matiere": "Mécanique 1",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498112",
+              "Matiere": "Conception 1",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498113",
+              "Matiere": "Atelier",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 42,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Matériaux et procédés 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574498116",
+              "Matiere": "Atelier",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498115",
+              "Matiere": "Siences des matériaux 1",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498114",
+              "Matiere": "Procédés 1",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electricité 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574498117",
+              "Matiere": "Electronique",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498118",
+              "Matiere": "Electrotechnique",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498119",
+              "Matiere": "Atelier : Electricité 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 1",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "574498121",
+              "Matiere": "Algébre 1",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498120",
+              "Matiere": "Analyse 1",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et Compétences 1",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "574498122",
+              "Matiere": "English for Sientific Purposes 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498123",
+              "Matiere": "Techniques avancées de communications 1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 2,
+      "UE": [
+        {
+          "Module": "Conception et Modélisation 2",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574498124",
+              "Matiere": "Mécanique 2",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498126",
+              "Matiere": "Atelier : Mécanique 2/ CAO",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 42,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498125",
+              "Matiere": "Conception 2",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Matériaux et procédés 2",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574498128",
+              "Matiere": "Sciences des matériaux 2",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498127",
+              "Matiere": "Procédés 2",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574498129",
+              "Matiere": "Atelier",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Electricité 2/ Informatique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574498131",
+              "Matiere": "Algorithmique et programmation",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498130",
+              "Matiere": "Circuits et Shémas électriques",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498132",
+              "Matiere": "Atelier",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Mathématiques 2",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "574498134",
+              "Matiere": "Statistiques",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498133",
+              "Matiere": "Analyse 2",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et Compétences 2",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "574498136",
+              "Matiere": "Techniques avancées de communication 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574498135",
+              "Matiere": "English for scientific purposes 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 3,
+      "UE": [
+        {
+          "Module": "Mécanique des Fluides et Thermique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405321",
+              "Matiere": "Mécanique des Fluides(Statique,Dynamique des Fluides)",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574405322",
+              "Matiere": "Thermique Industrielle(Thermodynamique et Transfert)",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574405323",
+              "Matiere": "Atelier:Mécanique des Fluides/Thermique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Automatique",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405333",
+              "Matiere": "Atelier: Automatique/Asservissement",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405331",
+              "Matiere": "Automatismes Industriels",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405332",
+              "Matiere": "Régulation et Asservissement",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Conceptio et Modélisation 3",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405313",
+              "Matiere": "Atelier:CAO3/Mécanique3",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405312",
+              "Matiere": "Conception 3(Dimensionnement et Transmission de Puissance)",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574405311",
+              "Matiere": "Mécanique 3: Mécanique Vibratoire et Calcul",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et Compétences 3",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "574405342",
+              "Matiere": "Culture de l'Entreprise",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405341",
+              "Matiere": "Technique de Communication1",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UE:Mini Projet",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "169916862",
+              "Matiere": "initiation aux Mini Projets",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "169916863",
+              "Matiere": "Mini Projet Personnalisé",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "cc",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 21,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 4,
+      "UE": [
+        {
+          "Module": "Energies Renouvelables 1",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405412",
+              "Matiere": "Procédés de Conversation de l'Energie",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405411",
+              "Matiere": "Energie Eolienne",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405413",
+              "Matiere": "Atelier: Energies Renouvelables",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Instrumentation des Systèmes Energétiques",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405422",
+              "Matiere": "l'Acquisition des Données",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405421",
+              "Matiere": "Les Capteurs",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405423",
+              "Matiere": "Atelier: Instrumentation",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Modélisation des Systèmes Solaires",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405432",
+              "Matiere": "les Systèmes Solaires Photovoltaiques",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574405431",
+              "Matiere": "les Systèmes Solaires Thermiques",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 21,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 42
+              }
+            },
+            {
+              "Code_EE": "574405433",
+              "Matiere": "Atelier: Conception des Systèmes Solaires",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et Compétences 4",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "574405442",
+              "Matiere": "Développement Durable",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405441",
+              "Matiere": "Technique de Communication 2",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "UE:Mini projet",
+          "Cr": 5,
+          "Coef": 2.5,
+          "Elements": [
+            {
+              "Code_EE": "169916864",
+              "Matiere": "initiation aux Mini Projets",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "169916865",
+              "Matiere": "Mini Projet Personnalisé",
+              "Coef": 1.5,
+              "Cr": 3,
+              "Rg": "cc",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 42,
+                "Total": 42
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Semestre": 5,
+      "UE": [
+        {
+          "Module": "Les machines frigorifiques",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405536",
+              "Matiere": "Atelier : machines frigorifiques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405514",
+              "Matiere": "Les systémes de climatisation",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405515",
+              "Matiere": "Les machines frigorifiques",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Energies renouvelables 2",
+          "Cr": 7,
+          "Coef": 3.5,
+          "Elements": [
+            {
+              "Code_EE": "574405511",
+              "Matiere": "Energie des mers/géothermale",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405512",
+              "Matiere": "Valorisation énergétique des déchets",
+              "Coef": 1.25,
+              "Cr": 2.5,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405513",
+              "Matiere": "Transfert thermique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Langues et compétences 5",
+          "Cr": 4,
+          "Coef": 2,
+          "Elements": [
+            {
+              "Code_EE": "574405518",
+              "Matiere": "Projet linguistique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 10.5,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405519",
+              "Matiere": "Droit social et droit du travail",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 10.5,
+                "TD": 0,
+                "TP": 0,
+                "C_Int": 10.5,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Modélisation des moteurs thermiques",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "574405520",
+              "Matiere": "Thermomécanique",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "574405521",
+              "Matiere": "Moteurs thermiques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "MX",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 21
+              }
+            },
+            {
+              "Code_EE": "574405522",
+              "Matiere": "Atelier :Moteurs thermiques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "CC",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        },
+        {
+          "Module": "Modélisation des systèmes énergétiques",
+          "Cr": 6,
+          "Coef": 3,
+          "Elements": [
+            {
+              "Code_EE": "169924104",
+              "Matiere": "Outils de Modélisation",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169924105",
+              "Matiere": "simulation des modèles énergétiques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "",
+              "Volume_Horaire": {
+                "Cours": 21,
+                "TD": 10.5,
+                "TP": 0,
+                "C_Int": 0,
+                "Total": 31.5
+              }
+            },
+            {
+              "Code_EE": "169924106",
+              "Matiere": "Atelier: conception des systèmes énergétiques",
+              "Coef": 1,
+              "Cr": 2,
+              "Rg": "cc",
+              "Volume_Horaire": {
+                "Cours": 0,
+                "TD": 0,
+                "TP": 21,
+                "C_Int": 0,
+                "Total": 21
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
