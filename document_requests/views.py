@@ -99,6 +99,41 @@ class TerminateDocumentRequestView(generics.UpdateAPIView):
         # Send email notification to student
         self._send_status_update_email(serializer.instance, user)
 
+    def _send_status_update_email(self, document_request, changed_by=None):
+        """Send email notification to student about status update"""
+        student = document_request.student
+
+        # Prepare email context
+        context = {
+            'student_name': student.first_name or student.email,
+            'document_type': document_request.get_document_type_display(),
+            'status': document_request.status,
+            'status_display': document_request.get_status_display(),
+            'academic_year': document_request.academic_year,
+            'language_display': document_request.get_language_display(),
+            'comment': getattr(document_request, 'comment', '') or '',
+            'request_url': f"{settings.FRONTEND_URL}/student/documents/{document_request.public_id}" if hasattr(settings, 'FRONTEND_URL') else f"/student/documents/{document_request.public_id}",
+            'download_url': f"{settings.FRONTEND_URL}/student/documents/{document_request.public_id}/download" if hasattr(settings, 'FRONTEND_URL') else f"/student/documents/{document_request.public_id}/download"
+        }
+
+        # Prepare email content
+        subject = f"Statut de votre demande de document mis à jour - {document_request.get_status_display()}"
+        html_message = render_to_string('emails/documents/status_updated.html', context)
+        plain_message = strip_tags(html_message)
+
+        try:
+            send_mail(
+                subject=subject,
+                message=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[student.email],
+                html_message=html_message,
+                fail_silently=False,
+            )
+            logger.info(f"Email sent to student {student.email} about status update for document request {document_request.public_id}")
+        except Exception as e:
+            logger.error(f"Failed to send email to student {student.email}: {str(e)}")
+
 class RejectDocumentRequestView(generics.UpdateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     lookup_field = 'public_id'
@@ -117,6 +152,41 @@ class RejectDocumentRequestView(generics.UpdateAPIView):
         # Send email notification to student
         self._send_status_update_email(serializer.instance, user)
 
+    def _send_status_update_email(self, document_request, changed_by=None):
+        """Send email notification to student about status update"""
+        student = document_request.student
+
+        # Prepare email context
+        context = {
+            'student_name': student.first_name or student.email,
+            'document_type': document_request.get_document_type_display(),
+            'status': document_request.status,
+            'status_display': document_request.get_status_display(),
+            'academic_year': document_request.academic_year,
+            'language_display': document_request.get_language_display(),
+            'comment': getattr(document_request, 'comment', '') or '',
+            'request_url': f"{settings.FRONTEND_URL}/student/documents/{document_request.public_id}" if hasattr(settings, 'FRONTEND_URL') else f"/student/documents/{document_request.public_id}",
+            'download_url': f"{settings.FRONTEND_URL}/student/documents/{document_request.public_id}/download" if hasattr(settings, 'FRONTEND_URL') else f"/student/documents/{document_request.public_id}/download"
+        }
+
+        # Prepare email content
+        subject = f"Statut de votre demande de document mis à jour - {document_request.get_status_display()}"
+        html_message = render_to_string('emails/documents/status_updated.html', context)
+        plain_message = strip_tags(html_message)
+
+        try:
+            send_mail(
+                subject=subject,
+                message=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[student.email],
+                html_message=html_message,
+                fail_silently=False,
+            )
+            logger.info(f"Email sent to student {student.email} about status update for document request {document_request.public_id}")
+        except Exception as e:
+            logger.error(f"Failed to send email to student {student.email}: {str(e)}")
+
 class ProcessDocumentRequestView(generics.UpdateAPIView):
     permission_classes = [permissions.IsAuthenticated]
     lookup_field = 'public_id'
@@ -134,6 +204,41 @@ class ProcessDocumentRequestView(generics.UpdateAPIView):
 
         # Send email notification to student
         self._send_status_update_email(serializer.instance, user)
+
+    def _send_status_update_email(self, document_request, changed_by=None):
+        """Send email notification to student about status update"""
+        student = document_request.student
+
+        # Prepare email context
+        context = {
+            'student_name': student.first_name or student.email,
+            'document_type': document_request.get_document_type_display(),
+            'status': document_request.status,
+            'status_display': document_request.get_status_display(),
+            'academic_year': document_request.academic_year,
+            'language_display': document_request.get_language_display(),
+            'comment': getattr(document_request, 'comment', '') or '',
+            'request_url': f"{settings.FRONTEND_URL}/student/documents/{document_request.public_id}" if hasattr(settings, 'FRONTEND_URL') else f"/student/documents/{document_request.public_id}",
+            'download_url': f"{settings.FRONTEND_URL}/student/documents/{document_request.public_id}/download" if hasattr(settings, 'FRONTEND_URL') else f"/student/documents/{document_request.public_id}/download"
+        }
+
+        # Prepare email content
+        subject = f"Statut de votre demande de document mis à jour - {document_request.get_status_display()}"
+        html_message = render_to_string('emails/documents/status_updated.html', context)
+        plain_message = strip_tags(html_message)
+
+        try:
+            send_mail(
+                subject=subject,
+                message=plain_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[student.email],
+                html_message=html_message,
+                fail_silently=False,
+            )
+            logger.info(f"Email sent to student {student.email} about status update for document request {document_request.public_id}")
+        except Exception as e:
+            logger.error(f"Failed to send email to student {student.email}: {str(e)}")
 
 
 class DocumentRequestFileView(generics.RetrieveAPIView):

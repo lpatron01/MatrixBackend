@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification d'Élimination</title>
+</head>
+
+<body
+    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f5f7fa; margin: 0; padding: 20px;">
+    <div
+        style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #dc2626, #b91c1c); padding: 30px; text-align: center;">
+            <h1 style="color: #ffffff; margin: 0; font-size: 24px;">🚨 ALERTE : Élimination</h1>
+        </div>
+
+        <!-- Content -->
+        <div style="padding: 30px;">
+            <p style="color: #374151; font-size: 16px; line-height: 1.6;">
+                Bonjour <strong>{{ student_name }}</strong>,
+            </p>
+
+            <div
+                style="background-color: #fef2f2; border: 2px solid #dc2626; border-radius: 12px; padding: 25px; margin: 20px 0; text-align: center;">
+                <p style="color: #dc2626; font-size: 20px; font-weight: bold; margin: 0;">
+                    ❌ Vous avez été ÉLIMINÉ(E)
+                </p>
+                <p style="color: #991b1b; font-size: 16px; margin: 10px 0 0 0;">
+                    dans la matière <strong>{{ subject_name }}</strong>
+                </p>
+            </div>
+
+            <p style="color: #374151; font-size: 16px; line-height: 1.6;">
+                Suite à votre <strong style="color: #dc2626;">{{ absence_count }}ème absence</strong> dans cette
+                matière,
+                vous avez atteint le seuil d'élimination conformément au règlement intérieur de l'établissement.
+            </p>
+
+            <!-- Details Box -->
+            <div
+                style="background-color: #f9fafb; border-left: 4px solid #dc2626; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 5px 0; color: #374151;">
+                    <strong>📚 Matière :</strong> {{ subject_name }}
+                </p>
+                <p style="margin: 5px 0; color: #374151;">
+                    <strong>📊 Nombre d'absences :</strong> {{ absence_count }} / 4 maximum
+                </p>
+                <p style="margin: 5px 0; color: #374151;">
+                    <strong>📅 Dernière absence :</strong> {{ date }}
+                </p>
+                <p style="margin: 5px 0; color: #374151;">
+                    <strong>👨‍🏫 Enseignant :</strong> {{ teacher_name }}
+                </p>
+            </div>
+
+            <div style="background-color: #fef3c7; border-radius: 8px; padding: 15px; margin: 20px 0;">
+                <p style="color: #92400e; margin: 0; font-size: 14px;">
+                    <strong>💡 Important :</strong> Si vous avez des justificatifs à fournir, veuillez contacter
+                    immédiatement l'administration scolaire pour examiner votre situation.
+                </p>
+            </div>
+
+            <p style="color: #6b7280; font-size: 14px; line-height: 1.6;">
+                Vous pouvez faire une réclamation via la plateforme si vous pensez qu'il y a eu une erreur.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div style="background-color: #fef2f2; padding: 20px; text-align: center; border-top: 1px solid #fecaca;">
+            <p style="color: #dc2626; font-size: 14px; margin: 0; font-weight: 500;">
+                Cette notification est générée automatiquement par le système.
+            </p>
+            <p style="color: #9ca3af; font-size: 12px; margin: 10px 0 0 0;">
+                © {{ year }} ISSAT Sousse - Système de Gestion des Absences
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

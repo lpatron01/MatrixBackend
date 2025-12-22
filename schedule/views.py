@@ -211,6 +211,9 @@ class MarkAttendanceView(APIView):
     permission_classes = [IsTeacherOrAdmin]
 
     def post(self, request):
+        from .email_service import notify_student_absence
+        from users.models import User
+        
         serializer = BulkAttendanceSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
@@ -231,6 +234,8 @@ class MarkAttendanceView(APIView):
 
         created = []
         updated = []
+        notifications_sent = []
+        eliminations = []
 
         for att in attendances:
             student_id = att['student_id']
@@ -251,10 +256,32 @@ class MarkAttendanceView(APIView):
             else:
                 updated.append(student_id)
 
+            # Send notification if student is marked absent
+            if att_status == Attendance.Status.ABSENT:
+                try:
+                    student = User.objects.get(id=student_id)
+                    result = notify_student_absence(student, session, attendance)
+                    if result['notification_sent']:
+                        notifications_sent.append(student_id)
+                    if result['is_eliminated']:
+                        eliminations.append({
+                            'student_id': student_id,
+                            'student_name': f"{student.first_name} {student.last_name}",
+                            'absence_count': result['absence_count']
+                        })
+                except User.DoesNotExist:
+                    pass
+                except Exception as e:
+                    # Log but don't fail the request
+                    import logging
+                    logging.getLogger(__name__).error(f"Notification error: {e}")
+
         return Response({
             'message': 'Attendance marked successfully',
             'created': len(created),
-            'updated': len(updated)
+            'updated': len(updated),
+            'notifications_sent': len(notifications_sent),
+            'eliminations': eliminations
         })
 
 
